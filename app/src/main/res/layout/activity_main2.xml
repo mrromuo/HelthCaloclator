@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk01"
+    android:backgroundTint="@color/cardview_dark_background"
+    android:backgroundTintMode="screen"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/select"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/selc1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="bmi"
+        android:text="@string/selection_1" />
+
+    <Button
+        android:id="@+id/sel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="wtr"
+        android:text="@string/selection_2" />
+
+    <Button
+        android:id="@+id/sel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="hbt"
+        android:text="@string/selection_3" />
+
+    <Button
+        android:id="@+id/sel4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="bmrx"
+        android:text="@string/CalorieCalculator" />
+
+</LinearLayout>

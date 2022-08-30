@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hrtbtlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/bk01"
+    android:backgroundTint="@color/cardview_dark_background"
+    android:backgroundTintMode="screen"
+    android:orientation="vertical"
+    tools:context=".heatbt">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/windowTitleSize"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/HeartTar"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TableRow
+        android:id="@+id/ro02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age" />
+
+        <EditText
+            android:id="@+id/HeartAgeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/age"
+            android:inputType="numberSigned"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/ro03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/H_Resting_Heart" />
+
+        <EditText
+            android:id="@+id/HeartRestingEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberSigned"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </TableRow>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="heatCalculate"
+        android:text="@string/Calculate"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/HeartTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</LinearLayout>

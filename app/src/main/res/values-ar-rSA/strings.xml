@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">حاسبة الياقة و الصحة</string>
+    <string name="select">إختر واحدا</string>
+    <string name="selection_1">حساب كتلة الجسم</string>
+    <string name="selection_2">حساب الحاجة للماء</string>
+    <string name="selection_3">حساب معدل نبضات القلب</string>
+    <string name="Calculate">احسب</string>
+
+    <!--   BMI -->
+    <string name="bmi">مؤشر كتلة الجسم</string>
+    <string name="height">طولك</string>
+    <string name="height_hint">طولك باوحدة سم</string>
+    <string name="Weight">وزنك</string>
+    <string name="weight_hint">وزنك بالكيلو جرامات</string>
+
+    <!-- Heart Rate Calculator -->
+    <string name="HeartTar">حساب معدل نبضات القلب المستهدف</string>
+    <string name="age">عمرك</string>
+    <string name="age_hint">العمر بين ال15 و ال80 سنة</string>
+    <string name="H_Resting_Heart">نبضات القلب في الراحة</string>
+    <string name="H_Age_Error">آسف العمر يجب ان يكون بين 15 سنة و ال80 سنة</string>
+    <string name="H_RHR_Error">نبضات القلب وقت الراحة تكون بين 50 و ال90 نبضة في الدقيقة</string>
+    <string name="H_Target_min">اقل نبضات</string>
+    <string name="H_Target_mod">النبضات المعتدلة</string>
+    <string name="H_Target_max">أعلى نبضات</string>
+    <string name="H_Target_tr">أثناء التمرين</string>
+
+    <!-- water needs Calculator -->
+    <string name="W_weightError">أرجو مراجعة الوزن!</string>
+    <string name="to"> الى </string>
+    <string name="from">أنت بحاجة من </string>
+    <string name="ml"> لترا </string>
+    <string name="cups"> كوبا </string>
+
+    <!-- Calorie Calculator -->
+    <string name="CalorieCalculator">حاسبة السعرات الحرارية</string>
+    <string name="Gender">الجنس</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="activity">النشاط</string>
+    <string name="Sedentary">قلة الحركة: القليل من التمارين أو بدونها</string>
+    <string name="light">تمرن من 1 إلى 3 مرات أسبوعيا</string>
+    <string name="moderate">معتدل 4 إلى 5 مرات أسبوعيا</string>
+    <string name="active">ممارسة يومية نشطة</string>
+    <string name="varyActive">تمرين مكثف 6 أو 7 أيام أسبوعيا</string>
+    <string name="HarrisBenedict">هاريس بنديكت</string>
+    <string name="BMRerror">يرجى التحقق من المدخلات الخاصة بك</string>
+    <string name="height_Erorr">تحقق من الطول ثم حاول مجددا</string>
+    <string name="weight_Erorr">تحقق من الوزن ثم حاول مجددا</string>
+
+    <!--weight table -->
+    <string name="weight1">نقص في الوزن</string>
+    <string name="weight2">وزن صحي</string>
+    <string name="weight3">زيادة في الوزن</string>
+    <string name="weight4">سمنة قليلة</string>
+    <string name="weight5">سمنة عالية</string>
+    <string name="weight6">سمنة مفرطة</string>
+    <string name="BMIweightHent">وزنك</string>
+
+</resources>

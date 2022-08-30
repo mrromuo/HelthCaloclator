@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bmilayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bk01"
+    android:backgroundTint="@color/cardview_dark_background"
+    android:backgroundTintMode="screen"
+    android:orientation="vertical"
+    tools:context=".BMI">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/bmi"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <Space
+        android:id="@+id/spc01"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/height" />
+
+        <EditText
+            android:id="@+id/BMIheight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/height_hint"
+            android:inputType="numberDecimal"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/BMIweightHent"
+            tools:text="@string/Weight" />
+
+        <EditText
+            android:id="@+id/BMIweight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/weight_hint"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <Space
+        android:id="@+id/spc02"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/BMIcalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="bmiCalculate"
+            android:text="@string/Calculate" />
+
+        <TextView
+            android:id="@+id/BMItv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/BMIclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/determinate_progress_Bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:indeterminate = "false"
+        android:max="100"
+        android:minWidth="100dp"
+        android:minHeight="50dp"
+        android:progress="0" />
+</LinearLayout>

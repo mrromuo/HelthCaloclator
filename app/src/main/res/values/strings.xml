@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">HelthCaloclator</string>
+<string name="select">Select one</string>
+<string name="selection_1">BMI Calculator</string>
+<string name="selection_2">water needs Calculator</string>
+<string name="selection_3">Heart Rate Calculator</string>
+<string name="Calculate">Calculate</string>
+
+<!--   BMI -->
+<string name="bmi">body mass index</string>
+<string name="height">your height</string>
+<string name="height_hint">your height in CMs</string>
+<string name="Weight">your weight</string>
+<string name="weight_hint">your weight in KGs</string>
+
+<!-- Heart Rate Calculator -->
+<string name="HeartTar">Target Heart Rate Calculator</string>
+<string name="age">your Age</string>
+<string name="age_hint">ages 15 to 80</string>
+<string name="H_Resting_Heart">Resting Heart</string>
+<string name="H_Age_Error">sorry! age must be between 15 to 90 only</string>
+<string name="H_RHR_Error">Heart beats during reset must be between 50 to 90</string>
+<string name="H_Target_min">Minimum heart beats</string>
+<string name="H_Target_mod">Moderate Heart beats</string>
+<string name="H_Target_max">Maximum heart beats</string>
+<string name="H_Target_tr">during this training</string>
+
+<!-- water needs Calculator -->
+<string name="W_weightError">Please check your weight!</string>
+<string name="to"> to </string>
+<string name="from">you need from </string>
+<string name="ml"> Lt </string>
+<string name="cups"> CUPs </string>
+
+<!-- Calorie Calculator -->
+<string name="CalorieCalculator">Calorie Calculator</string>
+<string name="Gender">Gender</string>
+<string name="male">Male</string>
+<string name="female">Female</string>
+<string name="activity">Activity</string>
+<string name="Sedentary">Sedentary: little or no exercise</string>
+<string name="light">exercise 1 to 3 times weekly</string>
+<string name="moderate">Moderate 4 to 5 times weekly</string>
+<string name="active">Active daily exercise</string>
+<string name="varyActive">intense exercise 6 or 7 days weekly</string>
+<string name="HarrisBenedict">Harris Benedict</string>
+<string name="BMRerror">Please check your inputs</string>
+<string name="height_Erorr">Please check the height</string>
+<string name="weight_Erorr">Please check the weight</string>
+
+<!--weight table -->
+<string name="weight1">underweight</string>
+<string name="weight2">healthy weight</string>
+<string name="weight3">overweight</string>
+<string name="weight4">Moderately obese</string>
+<string name="weight5">Severely obese</string>
+<string name="weight6">Very severely obese</string>
+    <string name="BMIweightHent">Your weight</string>
+</resources>
