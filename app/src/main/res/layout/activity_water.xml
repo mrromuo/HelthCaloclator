@@ -13,8 +13,8 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:fontFamily="sans-serif-black"
         android:text="@string/selection_2"
         android:textAlignment="center"
@@ -32,13 +32,13 @@
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            style="@style/TextofTextView"
             android:text="@string/Weight" />
 
         <EditText
             android:id="@+id/W_bodyweight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/EditTextStyle"
             android:ems="10"
             android:hint="@string/weight_hint"
             android:inputType="numberDecimal" />
@@ -54,7 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:onClick="watercalculation"
-        android:text="@string/Calculate" />
+        android:text="@string/Calculate"
+        android:background="@drawable/custom_buttom"/>
 
     <TextView
         android:id="@+id/WTRtv"

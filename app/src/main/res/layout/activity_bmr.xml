@@ -35,7 +35,7 @@
                 <TextView
                     android:id="@+id/BMRageTex"
                     style="@style/TextofTextView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:text="@string/age" />
 
@@ -57,10 +57,9 @@
                 <TextView
                     android:id="@+id/BMRweightTex"
                     style="@style/TextofTextView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/Weight"
-                    android:textColor="#01579B" />
+                    android:text="@string/Weight" />
 
                 <EditText
                     android:id="@+id/BMRweight"
@@ -68,7 +67,8 @@
                     android:ems="10"
                     android:hint="@string/weight_hint"
                     android:inputType="numberDecimal"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:importantForAutofill="no" />
             </TableRow>
 
             <TableRow
@@ -79,7 +79,7 @@
                 <TextView
                     android:id="@+id/BMRheightTex"
                     style="@style/TextofTextView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:text="@string/height" />
 
@@ -89,7 +89,8 @@
                     android:ems="10"
                     android:hint="@string/height_hint"
                     android:inputType="numberDecimal"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:importantForAutofill="no" />
 
             </TableRow>
 
@@ -98,13 +99,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp">
 
-                <Space
-                    android:layout_width="@android:dimen/app_icon_size"
-                    android:layout_height="wrap_content" />
-
                 <TextView
                     style="@style/TextofTextView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:text="@string/Gender" />
 
@@ -137,13 +134,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp">
 
-                <Space
-                    android:layout_width="@android:dimen/app_icon_size"
-                    android:layout_height="wrap_content" />
-
                 <TextView
                     style="@style/TextofTextView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:text="@string/activity" />
 
@@ -209,7 +202,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#B2EBFB"
+                android:textSize="@dimen/textSize"/>
         </LinearLayout>
 
 

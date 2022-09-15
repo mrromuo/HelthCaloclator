@@ -16,7 +16,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/select"
-        android:textSize="24sp" />
+        android:textAlignment="center"
+        android:textColor="#00ACC1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/selc1"
@@ -24,7 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:onClick="bmi"
-        android:text="@string/selection_1" />
+        android:text="@string/selection_1"
+        android:background="@drawable/custom_buttom"/>
 
     <Button
         android:id="@+id/sel2"
@@ -32,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:onClick="wtr"
-        android:text="@string/selection_2" />
+        android:text="@string/selection_2"
+        android:background="@drawable/custom_buttom"/>
 
     <Button
         android:id="@+id/sel3"
@@ -40,7 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:onClick="hbt"
-        android:text="@string/selection_3" />
+        android:text="@string/selection_3"
+        android:background="@drawable/custom_buttom"/>
 
     <Button
         android:id="@+id/sel4"
@@ -48,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:onClick="bmrx"
-        android:text="@string/CalorieCalculator" />
+        android:text="@string/CalorieCalculator"
+        android:background="@drawable/custom_buttom"/>
 
 </LinearLayout>

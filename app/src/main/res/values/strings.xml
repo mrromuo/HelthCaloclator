@@ -56,4 +56,5 @@
 <string name="weight5">Severely obese</string>
 <string name="weight6">Very severely obese</string>
     <string name="BMIweightHent">Your weight</string>
+    <string name="resthartbt">your heart beats guring reat</string>
 </resources>
