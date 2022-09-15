@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Calories"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bk01"
+    android:background="@drawable/bk02"
     android:backgroundTint="@color/cardview_dark_background"
     android:backgroundTintMode="screen"
     android:orientation="vertical"
     tools:context=".BMR">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,6 +24,7 @@
                 android:fontFamily="sans-serif-black"
                 android:text="@string/CalorieCalculator"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="24sp" />
 
             <TableRow
@@ -36,16 +34,17 @@
 
                 <TextView
                     android:id="@+id/BMRageTex"
+                    style="@style/TextofTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/age" />
 
                 <EditText
                     android:id="@+id/BMRage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/EditTextStyle"
                     android:ems="10"
                     android:hint="@string/age_hint"
+                    android:importantForAutofill="no"
                     android:inputType="numberDecimal"
                     tools:ignore="TouchTargetSizeCheck" />
             </TableRow>
@@ -57,14 +56,15 @@
 
                 <TextView
                     android:id="@+id/BMRweightTex"
+                    style="@style/TextofTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Weight" />
+                    android:text="@string/Weight"
+                    android:textColor="#01579B" />
 
                 <EditText
                     android:id="@+id/BMRweight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/EditTextStyle"
                     android:ems="10"
                     android:hint="@string/weight_hint"
                     android:inputType="numberDecimal"
@@ -78,14 +78,14 @@
 
                 <TextView
                     android:id="@+id/BMRheightTex"
+                    style="@style/TextofTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/height" />
 
                 <EditText
                     android:id="@+id/BMRheight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/EditTextStyle"
                     android:ems="10"
                     android:hint="@string/height_hint"
                     android:inputType="numberDecimal"
@@ -103,6 +103,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    style="@style/TextofTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Gender" />
@@ -115,6 +116,7 @@
 
                     <RadioButton
                         android:id="@+id/malebutton"
+                        style="@style/TextofTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="checksex"
@@ -122,6 +124,7 @@
 
                     <RadioButton
                         android:id="@+id/femaleButton"
+                        style="@style/TextofTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="checksex"
@@ -139,6 +142,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    style="@style/TextofTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/activity" />
@@ -150,6 +154,7 @@
 
                     <RadioButton
                         android:id="@+id/BMRsedntary"
+                        style="@style/TextofTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:onClick="checkActivity"
@@ -157,6 +162,7 @@
 
                     <RadioButton
                         android:id="@+id/BMRlightAct"
+                        style="@style/TextofTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:onClick="checkActivity"
@@ -164,6 +170,7 @@
 
                     <RadioButton
                         android:id="@+id/BMRmod"
+                        style="@style/TextofTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="checkActivity"
@@ -171,6 +178,7 @@
 
                     <RadioButton
                         android:id="@+id/BMRactiv"
+                        style="@style/TextofTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="checkActivity"
@@ -178,6 +186,7 @@
 
                     <RadioButton
                         android:id="@+id/BMRvaryActiv"
+                        style="@style/TextofTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="checkActivity"
@@ -188,11 +197,12 @@
 
             <Button
                 android:id="@+id/BMRcalculate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
                 android:layout_margin="5dp"
                 android:onClick="BMRcalcolation"
-                android:text="@string/Calculate" />
+                android:text="@string/Calculate"
+                android:background="@drawable/custom_buttom"/>
 
             <TextView
                 android:id="@+id/BMRtv"
@@ -201,6 +211,6 @@
                 android:layout_margin="5dp"
                 android:textAlignment="center" />
         </LinearLayout>
-    </ScrollView>
 
-</FrameLayout>
+
+</ScrollView>

@@ -5,8 +5,7 @@
     android:id="@+id/hrtbtlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="@drawable/bk01"
+    android:background="@drawable/bk02"
     android:backgroundTint="@color/cardview_dark_background"
     android:backgroundTintMode="screen"
     android:orientation="vertical"
@@ -29,14 +28,14 @@
 
         <TextView
             android:id="@+id/textView5"
+            style="@style/TextofTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/age" />
 
         <EditText
             android:id="@+id/HeartAgeEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/EditTextStyle"
             android:ems="10"
             android:hint="@string/age"
             android:inputType="numberSigned"
@@ -52,14 +51,14 @@
 
         <TextView
             android:id="@+id/textView50"
+            style="@style/TextofTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/H_Resting_Heart" />
 
         <EditText
             android:id="@+id/HeartRestingEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/EditTextStyle"
             android:ems="10"
             android:inputType="numberSigned"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />

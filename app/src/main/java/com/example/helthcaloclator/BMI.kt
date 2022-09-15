@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 
@@ -15,6 +16,8 @@ class BMI : AppCompatActivity() {
 
     private var height: EditText? = null
     private var weight: EditText? = null
+    private var mImage:ImageView? = null
+    private var fImage:ImageView? = null
     private var bmiview: TextView? = null
     private var progresbr: ProgressBar? = null
     private var classification: TextView? = null
@@ -32,6 +35,8 @@ class BMI : AppCompatActivity() {
         setContentView(R.layout.activity_bmi)
         height = findViewById(R.id.BMIheight)
         weight = findViewById(R.id.BMIweight)
+        mImage = findViewById(R.id.maleimage)
+        fImage = findViewById(R.id.femailImage)
         bmiview = findViewById(R.id.BMItv)
         progresbr = findViewById(R.id.determinate_progress_Bar)
         classification = findViewById(R.id.BMIclass)
@@ -76,6 +81,10 @@ class BMI : AppCompatActivity() {
                 bmiview?.text = String.format("BMI = %.2f", bmi)
                 val BmiWord = BmiGagment(bmi)
                 classification?.text = BmiWord
+                val BmiMimage = getImage(bmi)
+                mImage?.setImageResource(BmiMimage)
+                val BmiFimage= getFImage(bmi)
+                fImage?.setImageResource(BmiFimage)
                 val progress = (bmi * 2).toInt()
                 progresbr?.progress = if (progress < 100) {
                     progress
@@ -97,6 +106,8 @@ class BMI : AppCompatActivity() {
         }
     }
 
+
+
     fun BmiGagment(bmi: Double): String {
         val r = when (bmi) {
             in 0.0..18.49 -> resources.getString(R.string.weight1)
@@ -109,4 +120,30 @@ class BMI : AppCompatActivity() {
         return r
     }
 
+    private fun getImage(bmi: Double):Int
+    {
+        val imagnum = when (bmi)
+        {
+            in 0.0..18.49 -> R.drawable.under_weight_m
+            in 18.50..24.99 -> R.drawable.normal_m
+            in 25.0..29.99 -> R.drawable.over_wright_m
+            in 30.0..34.99 -> R.drawable.obese_m
+            in 35.0..40.0 -> R.drawable.extremly_obese_m
+            else -> R.drawable.extremly_obese_m
+        }
+        return imagnum
+    }
+    private fun getFImage(bmi: Double): Int
+    {
+        val imagnum = when (bmi)
+        {
+            in 0.0..18.49 -> R.drawable.under_weight
+            in 18.50..24.99 -> R.drawable.normal
+            in 25.0..29.99 -> R.drawable.over_wright
+            in 30.0..34.99 -> R.drawable.obese
+            in 35.0..40.0 -> R.drawable.extremly_obese
+            else -> R.drawable.extremly_obese
+        }
+        return imagnum
+    }
 }
