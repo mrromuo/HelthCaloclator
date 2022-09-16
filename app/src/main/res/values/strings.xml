@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HelthCaloclator</string>
+    <string name="app_name">Helth Caloclator</string>
 <string name="select">Select one</string>
 <string name="selection_1">BMI Calculator</string>
 <string name="selection_2">water needs Calculator</string>
