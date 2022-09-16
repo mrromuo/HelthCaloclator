@@ -2,12 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bmilayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bk02"
-    android:backgroundTint="@color/cardview_dark_background"
-    android:backgroundTintMode="screen"
+    style="@style/Layoutscomens"
+    android:layout_gravity="center_vertical"
     android:orientation="vertical"
 android:gravity="center_horizontal"
     tools:context=".BMI">
@@ -35,17 +31,14 @@ android:gravity="center_horizontal"
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/height"
-            android:textColor="#EDE7F6" />
+            style="@style/TextofTextView"
+            android:text="@string/height" />
 
         <EditText
             android:id="@+id/BMIheight"
             style="@style/EditTextStyle"
             android:ems="10"
             android:hint="@string/height_hint"
-            android:inputType="numberDecimal"
-            android:textColorHint="#B3E5FC"
             tools:ignore="SpeakableTextPresentCheck"
             android:importantForAutofill="no" />
     </TableRow>
@@ -58,9 +51,8 @@ android:gravity="center_horizontal"
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TextofTextView"
             android:text="@string/BMIweightHent"
-            android:textColor="#EDE7F6"
             tools:text="@string/Weight" />
 
         <EditText
@@ -69,7 +61,6 @@ android:gravity="center_horizontal"
             android:ems="10"
             android:hint="@string/weight_hint"
             android:inputType="numberDecimal"
-            android:textColorHint="#B2EBF2"
             android:importantForAutofill="no"/>
     </TableRow>
 
@@ -79,11 +70,8 @@ android:gravity="center_horizontal"
 
         <Button
             android:id="@+id/BMIcalculate"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/custom_buttom"
-            android:gravity="center"
+            style="@style/comunButtons"
+            android:layout_width="200dp"
             android:onClick="bmiCalculate"
             android:text="@string/Calculate" />
 
