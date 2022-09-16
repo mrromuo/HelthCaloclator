@@ -9,12 +9,8 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/selection_2"
-        android:textAlignment="center"
-        android:textSize="24sp" />
+        style="@style/TextoftitalsText"
+        android:text="@string/selection_2" />
 
     <Space
         android:layout_width="match_parent"
@@ -55,6 +51,7 @@
         android:id="@+id/WTRtv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        style="@style/TextofTextView"
         android:layout_margin="5dp"
         android:textAlignment="center"
         android:textSize="20dp" />

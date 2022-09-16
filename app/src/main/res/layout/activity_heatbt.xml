@@ -10,13 +10,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/windowTitleSize"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/HeartTar"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="24sp" />
+        style="@style/TextoftitalsText"
+        android:text="@string/HeartTar" />
 
     <TableRow
         android:id="@+id/ro02"
@@ -81,6 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
+        android:textColor="@color/black"
         android:padding="5dp"
         android:textSize="20sp"
         android:textStyle="bold" />
