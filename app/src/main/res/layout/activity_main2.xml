@@ -23,24 +23,13 @@
 
             <ImageView
                 android:id="@+id/mylogo2"
-                android:layout_width="130dp"
-                android:layout_height="131dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/logo"
+                style="@style/LogoView"
                 tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="336dp"
-                android:layout_height="56dp"
-                android:layout_marginTop="30dp"
-                android:gravity="center_vertical"
-                android:text="@string/select"
-                android:textColor="#040EFF"
-                android:textSize="@dimen/textSize"
-                android:textStyle="bold" />
+                style="@style/sotialText"
+                android:text="@string/select" />
 
             <Button
                 android:id="@+id/selc1"
@@ -65,6 +54,10 @@
                 style="@style/comunButtons"
                 android:onClick="bmrx"
                 android:text="@string/CalorieCalculator" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="32dp" />
         </LinearLayout>
     </ScrollView>
 

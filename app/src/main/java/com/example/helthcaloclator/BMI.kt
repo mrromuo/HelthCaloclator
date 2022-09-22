@@ -25,7 +25,7 @@ class BMI : AppCompatActivity() {
     private lateinit var editor: SharedPreferences.Editor
 
     companion object {
-        val DATABMI = "BMIdata"
+        val DATABMI = "mydata"
         val WEIGHT_KEY = "BMIWeight"
         val HEIGHT_KEY = "BMIHeight"
     }

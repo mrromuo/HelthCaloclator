@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/hrtbtlayout"
     style="@style/Layoutscomens"
@@ -32,7 +31,6 @@
             android:autofillHints="no"
             android:ems="10"
             android:hint="@string/age"
-            android:inputType="numberSigned"
             tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
     </TableRow>
@@ -55,8 +53,6 @@
             style="@style/EditTextStyle"
             android:ems="10"
             android:hint="@string/H_Resting_Heart"
-            android:inputType="numberSigned"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck"
             android:importantForAutofill="no" />
 
     </TableRow>
@@ -73,11 +69,20 @@
 
     <TextView
         android:id="@+id/HeartTextView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/TextforRsults"
+        android:layout_height="@dimen/RsultTextHeght"
         android:gravity="center_horizontal"
-        android:textColor="@color/black"
-        android:padding="5dp"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:padding="5dp" />
+    <TextView
+        android:id="@+id/HeartTextView1"
+        style="@style/TextforRsults"
+        android:layout_height="@dimen/RsultTextHeght"
+        android:gravity="center_horizontal"
+        android:padding="5dp" />
+    <TextView
+        android:id="@+id/HeartTextView2"
+        style="@style/TextforRsults"
+        android:layout_height="@dimen/RsultTextHeght"
+        android:gravity="center_horizontal"
+        android:padding="5dp" />
 </LinearLayout>

@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         imageView = findViewById(R.id.imageView)
-        imageView?.setImageResource(R.drawable.logo)
+        imageView?.setImageResource(R.drawable.logopng)
     }
 
     fun bmion(view: View){

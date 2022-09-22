@@ -36,7 +36,6 @@
                     android:ems="10"
                     android:hint="@string/age_hint"
                     android:importantForAutofill="no"
-                    android:inputType="numberDecimal"
                     tools:ignore="TouchTargetSizeCheck" />
             </TableRow>
 
@@ -57,7 +56,6 @@
                     style="@style/EditTextStyle"
                     android:ems="10"
                     android:hint="@string/weight_hint"
-                    android:inputType="numberDecimal"
                     tools:ignore="TouchTargetSizeCheck"
                     android:importantForAutofill="no" />
             </TableRow>
@@ -79,7 +77,6 @@
                     style="@style/EditTextStyle"
                     android:ems="10"
                     android:hint="@string/height_hint"
-                    android:inputType="numberDecimal"
                     tools:ignore="TouchTargetSizeCheck"
                     android:importantForAutofill="no" />
 
@@ -188,12 +185,10 @@
 
             <TextView
                 android:id="@+id/BMRtv"
-                android:layout_width="match_parent"
+                style="@style/TextforRsults"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="@dimen/textSize"/>
+                android:textAlignment="center" />
         </LinearLayout>
 
 

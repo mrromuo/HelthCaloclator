@@ -12,10 +12,6 @@
         style="@style/TextoftitalsText"
         android:text="@string/selection_2" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@android:dimen/app_icon_size" />
-
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,8 +28,7 @@
             android:id="@+id/W_bodyweight"
             style="@style/EditTextStyle"
             android:ems="10"
-            android:hint="@string/weight_hint"
-            android:inputType="numberDecimal" />
+            android:hint="@string/weight_hint" />
     </TableRow>
 
     <Space
@@ -49,10 +44,12 @@
 
     <TextView
         android:id="@+id/WTRtv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        style="@style/TextofTextView"
-        android:layout_margin="5dp"
-        android:textAlignment="center"
-        android:textSize="20dp" />
+        android:layout_height="@dimen/RsultTextHeght"
+        style="@style/TextforRsults"
+        android:layout_margin="5dp" />
+    <TextView
+        android:id="@+id/WTRtv2"
+        android:layout_height="@dimen/RsultTextHeght"
+        style="@style/TextforRsults"
+        android:layout_margin="5dp" />
 </LinearLayout>

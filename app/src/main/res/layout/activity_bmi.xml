@@ -55,13 +55,13 @@ android:gravity="center_horizontal"
             style="@style/EditTextStyle"
             android:ems="10"
             android:hint="@string/weight_hint"
-            android:inputType="numberDecimal"
             android:importantForAutofill="no"/>
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="top">
 
         <Button
             android:id="@+id/BMIcalculate"
@@ -72,24 +72,17 @@ android:gravity="center_horizontal"
 
         <TextView
             android:id="@+id/BMItv"
-            android:layout_width="match_parent"
+            style="@style/TextforRsults"
             android:layout_height="match_parent"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:gravity="center" />
 
     </TableRow>
 
     <TextView
         android:id="@+id/BMIclass"
-        android:layout_width="match_parent"
+        style="@style/TextforRsults"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:gravity="center" />
 
     <TableRow
         android:id="@+id/imagsrow"

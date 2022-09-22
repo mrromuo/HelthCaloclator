@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="textSize">28sp</dimen>
+    <dimen name="RsultText">24sp</dimen>
+    <dimen name="RsultTextHeght" >58dp</dimen>
     <dimen name="layoutmargins">15dp</dimen>
 </resources>

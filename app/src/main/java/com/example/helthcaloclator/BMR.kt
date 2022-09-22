@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import com.example.helthcaloclator.BMI.Companion.DATABMI
 
 class BMR : AppCompatActivity() {
     private var agetext: EditText? = null
@@ -26,8 +27,6 @@ class BMR : AppCompatActivity() {
     private lateinit var editor: SharedPreferences.Editor
     private val MY_BMR_DATA ="bmrSharedPreferences"
     private val BMR_AGE_KEY = "AGE"
-    private val BMR_HEIGHT_KEY ="HeightKey"
-    private val BMR_WEIGHT_KEY ="WeightKey"
     private val BMR_GENDER_KEY ="SexKey"
     private val BMR_ACTYV_KEY ="ActivityKey"
 
@@ -40,7 +39,7 @@ class BMR : AppCompatActivity() {
         sexRadioGroup = findViewById(R.id.BMRsexGroup)
         activityRadioGroup = findViewById(R.id.BMRactivityGroup)
         BMRtvText = findViewById(R.id.BMRtv)
-        sharedPreferences = getSharedPreferences(MY_BMR_DATA,Context.MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences(DATABMI,Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()
         getMyData()
     }
@@ -126,16 +125,16 @@ class BMR : AppCompatActivity() {
     }
 
     private fun savedata(age:String, height:String, weight:String) {
-        editor.putString(BMR_AGE_KEY,age)
-        editor.putString(BMR_HEIGHT_KEY,height)
-        editor.putString(BMR_WEIGHT_KEY,weight)
+        editor.putString(heatbt.AGE_KEY,age)
+        editor.putString(BMI.HEIGHT_KEY,height)
+        editor.putString(BMI.WEIGHT_KEY,weight)
         editor.apply()
         editor.commit()
     }
     private fun getMyData(){
-        agetext?.setText(sharedPreferences.getString(BMR_AGE_KEY,null))
-        heightText?.setText(sharedPreferences.getString(BMR_HEIGHT_KEY,null))
-        weightText?.setText(sharedPreferences.getString(BMR_WEIGHT_KEY,null))
+        agetext?.setText(sharedPreferences.getString(heatbt.AGE_KEY,null))
+        heightText?.setText(sharedPreferences.getString(BMI.HEIGHT_KEY,null))
+        weightText?.setText(sharedPreferences.getString(BMI.WEIGHT_KEY,null))
         val gender = sharedPreferences.getBoolean(BMR_GENDER_KEY,true)
         isSexMale = gender
         actyvity = sharedPreferences.getInt(BMR_ACTYV_KEY,0)
