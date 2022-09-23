@@ -56,5 +56,8 @@
     <string name="weight5">سمنة عالية</string>
     <string name="weight6">سمنة مفرطة</string>
     <string name="BMIweightHent">وزنك</string>
+    <string name="resthartbt">معدل نبضات القلب اثناء الراحة</string>
+    <string name="BMRrsultTitleerorr">حدث خطأ!</string>
+    <string name="BMRrsultTitle">النتيجة</string>
 
 </resources>

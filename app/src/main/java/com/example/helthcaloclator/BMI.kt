@@ -65,7 +65,7 @@ class BMI : AppCompatActivity() {
                 in 100.0..250.0 -> (heightVal * heightVal) / 10000
                 else -> .5
             }
-            weightVal = if (weightVal < 40 || weightVal > 400) {
+            weightVal = if (weightVal < 30 || weightVal > 350) {
                 1.0
             } else weightVal
 
@@ -105,8 +105,6 @@ class BMI : AppCompatActivity() {
             }
         }
     }
-
-
 
     fun BmiGagment(bmi: Double): String {
         val r = when (bmi) {

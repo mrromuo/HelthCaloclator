@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.example.helthcaloclator.BMI.Companion.DATABMI
 
 class BMR : AppCompatActivity() {
@@ -25,8 +26,6 @@ class BMR : AppCompatActivity() {
     private var prebmr: Double? = 0.0
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
-    private val MY_BMR_DATA ="bmrSharedPreferences"
-    private val BMR_AGE_KEY = "AGE"
     private val BMR_GENDER_KEY ="SexKey"
     private val BMR_ACTYV_KEY ="ActivityKey"
 
@@ -117,10 +116,16 @@ class BMR : AppCompatActivity() {
                     else -> 0.0
                 }
             }
-            BMRtvText?.text =String.format("= %.2f" , bmrx)
+            BMRtvText?.text =String.format("%.2f" , bmrx)
             savedata(agetext?.text.toString(),heightText?.text.toString(),weightText?.text.toString())
+            val title:String =getText(R.string.BMRrsultTitle).toString()
+            val msg = String.format(" %.2f" , bmrx)
+            mydaialog(title,msg)
         } else {
             BMRtvText?.text = getText(R.string.BMRerror)
+            val title:String =getText(R.string.BMRrsultTitleerorr).toString()
+            val msg = getText(R.string.BMRerror).toString()
+            mydaialog(title,msg)
         }
     }
 
@@ -131,6 +136,7 @@ class BMR : AppCompatActivity() {
         editor.apply()
         editor.commit()
     }
+
     private fun getMyData(){
         agetext?.setText(sharedPreferences.getString(heatbt.AGE_KEY,null))
         heightText?.setText(sharedPreferences.getString(BMI.HEIGHT_KEY,null))
@@ -152,5 +158,14 @@ class BMR : AppCompatActivity() {
             5 ->  activityRadioGroup?.check(R.id.BMRvaryActiv)
             else -> activityRadioGroup?.check(R.id.BMRsedntary)
         }
+    }
+
+    private fun mydaialog(title:String,Mssage:String){
+        val blder = AlertDialog.Builder(this)
+        blder.setTitle(title)
+            .setMessage(Mssage)
+            .setPositiveButton(android.R.string.ok){a,b->
+            }
+            .show()
     }
 }
