@@ -14,12 +14,11 @@
     <string name="weight_hint">your weight in KGs</string>
 
     <!-- Heart Rate Calculator -->
+    <string name="age_hint">ages 15 to 90</string>
+    <string name="H_RHR_Error">Heart beats during reset must be between 50 to 90</string>
     <string name="HeartTar">Target Heart Rate Calculator</string>
     <string name="age">your Age</string>
-    <string name="age_hint">ages 15 to 80</string>
     <string name="H_Resting_Heart">Resting Heart</string>
-    <string name="H_Age_Error">sorry! age must be between 15 to 90 only</string>
-    <string name="H_RHR_Error">Heart beats during reset must be between 50 to 90</string>
     <string name="H_Target_min">Minimum heart beats</string>
     <string name="H_Target_mod">Moderate Heart beats</string>
     <string name="H_Target_max">Maximum heart beats</string>
@@ -44,9 +43,7 @@
     <string name="active">Active daily exercise</string>
     <string name="varyActive">intense exercise 6 or 7 days weekly</string>
     <string name="HarrisBenedict">Harris Benedict</string>
-    <string name="BMRerror">Please check your inputs</string>
-    <string name="height_Erorr">Please check the height</string>
-    <string name="weight_Erorr">Please check the weight</string>
+
 
     <!--weight table -->
     <string name="weight1">underweight</string>
@@ -57,6 +54,25 @@
     <string name="weight6">Very severely obese</string>
     <string name="BMIweightHent">Your weight</string>
     <string name="resthartbt">your heart beats guring reat</string>
+    <string name="foodcalculator">Food Needs Calculator</string>
+    <string name="daycalories">Calories</string>
+
+    <!-- Error messages list -->
+
+    <string name="H_Age_Error">sorry! age must be between 15 to 90 only</string>
+    <string name="BMRerror">Please check your inputs</string>
+    <string name="height_Erorr">Please check the height</string>
+    <string name="weight_Erorr">Please check the weight</string>
     <string name="BMRrsultTitleerorr">Erorr!</string>
     <string name="BMRrsultTitle">Rsult</string>
+    <string name="calorieshint">Your need of Calories per Day</string>
+    <string name="foodcalorisx">Please, Check Calories agane</string>
+    <string name="food_carb_needs">"Your needs for carbohydrates approximately"</string>
+    <string name="food_prot_needs">"Your needs for protein approximately"</string>
+    <string name="food_fat_needs">"Your needs for Fats approximately"</string>
+
+    <!--   ======         UNTS          ========        -->
+    <string name="unt_grams"> gr</string>
+    <string name="unt_cm"> cm</string>
+    <string name="unt_kg"> Kg</string>
 </resources>

@@ -26,8 +26,13 @@ class BMR : AppCompatActivity() {
     private var prebmr: Double? = 0.0
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
-    private val BMR_GENDER_KEY ="SexKey"
-    private val BMR_ACTYV_KEY ="ActivityKey"
+
+    companion object
+    {
+        const val KEY_GENDER ="SexKey"
+        const val KEY_ACTIVITY ="ActivityKey"
+        const val KEY_CALORIES ="Calories"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +61,7 @@ class BMR : AppCompatActivity() {
                     if (checked) isSexMale = false
                 else -> isSexMale = true
             }
-            editor.putBoolean(BMR_GENDER_KEY, isSexMale)
+            editor.putBoolean(KEY_GENDER, isSexMale)
             editor.commit()
         }
     }
@@ -75,7 +80,7 @@ class BMR : AppCompatActivity() {
                 R.id.BMRvaryActiv -> if (checked) actyvity = 5
                 else -> actyvity = 0
             }
-            editor.putInt(BMR_ACTYV_KEY,actyvity)
+            editor.putInt(KEY_ACTIVITY,actyvity)
             editor.commit()
         }
     }
@@ -117,10 +122,10 @@ class BMR : AppCompatActivity() {
                 }
             }
             BMRtvText?.text =String.format("%.2f" , bmrx)
-            savedata(agetext?.text.toString(),heightText?.text.toString(),weightText?.text.toString())
             val title:String =getText(R.string.BMRrsultTitle).toString()
             val msg = String.format(" %.2f" , bmrx)
             mydaialog(title,msg)
+            savedata(agetext?.text.toString(),heightText?.text.toString(),weightText?.text.toString(),bmrx.toString())
         } else {
             BMRtvText?.text = getText(R.string.BMRerror)
             val title:String =getText(R.string.BMRrsultTitleerorr).toString()
@@ -129,21 +134,22 @@ class BMR : AppCompatActivity() {
         }
     }
 
-    private fun savedata(age:String, height:String, weight:String) {
-        editor.putString(heatbt.AGE_KEY,age)
-        editor.putString(BMI.HEIGHT_KEY,height)
-        editor.putString(BMI.WEIGHT_KEY,weight)
+    private fun savedata(age:String, height:String, weight:String,Calories:String) {
+        editor.putString(heatbt.KEY_AGE,age)
+        editor.putString(BMI.KEY_HEIGHT,height)
+        editor.putString(BMI.KEY_WEIGHT,weight)
+        editor.putString(KEY_CALORIES,Calories)
         editor.apply()
         editor.commit()
     }
 
     private fun getMyData(){
-        agetext?.setText(sharedPreferences.getString(heatbt.AGE_KEY,null))
-        heightText?.setText(sharedPreferences.getString(BMI.HEIGHT_KEY,null))
-        weightText?.setText(sharedPreferences.getString(BMI.WEIGHT_KEY,null))
-        val gender = sharedPreferences.getBoolean(BMR_GENDER_KEY,true)
+        agetext?.setText(sharedPreferences.getString(heatbt.KEY_AGE,null))
+        heightText?.setText(sharedPreferences.getString(BMI.KEY_HEIGHT,null))
+        weightText?.setText(sharedPreferences.getString(BMI.KEY_WEIGHT,null))
+        val gender = sharedPreferences.getBoolean(KEY_GENDER,true)
         isSexMale = gender
-        actyvity = sharedPreferences.getInt(BMR_ACTYV_KEY,0)
+        actyvity = sharedPreferences.getInt(KEY_ACTIVITY,0)
         if (gender){
             sexRadioGroup?.check(R.id.malebutton)
         }else{

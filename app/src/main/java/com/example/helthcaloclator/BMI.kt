@@ -25,9 +25,10 @@ class BMI : AppCompatActivity() {
     private lateinit var editor: SharedPreferences.Editor
 
     companion object {
-        val DATABMI = "mydata"
-        val WEIGHT_KEY = "BMIWeight"
-        val HEIGHT_KEY = "BMIHeight"
+        const val DATABMI = "mydata"
+        const val KEY_WEIGHT = "BMIWeight"
+        const val KEY_HEIGHT = "BMIHeight"
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,9 +44,9 @@ class BMI : AppCompatActivity() {
         sharedPreferences = getSharedPreferences(DATABMI, Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()
         val getH: String? =
-            sharedPreferences.getString(HEIGHT_KEY, null)
+            sharedPreferences.getString(KEY_HEIGHT, null)
         val getW: String? =
-            sharedPreferences.getString(WEIGHT_KEY, null)
+            sharedPreferences.getString(KEY_WEIGHT, null)
         height?.setText(getH)
         weight?.setText(getW)
 
@@ -70,13 +71,7 @@ class BMI : AppCompatActivity() {
             } else weightVal
 
             if (heightVal != .5 && weightVal != 1.0) {
-                // updating data
-                editor.putString(WEIGHT_KEY, weight?.text.toString())
-                editor.commit()
-                editor.putString(HEIGHT_KEY, height?.text.toString())
-               // editor.apply()
-                editor.commit()
-
+                SaveData()
                 val bmi = weightVal / heightVal
                 bmiview?.text = String.format("BMI = %.2f", bmi)
                 val BmiWord = BmiGagment(bmi)
@@ -104,6 +99,14 @@ class BMI : AppCompatActivity() {
                 bmiview?.text = getText(R.string.weight_Erorr)
             }
         }
+    }
+    private fun SaveData(){
+        // updating data
+        editor.putString(KEY_WEIGHT, weight?.text.toString())
+        editor.commit()
+        editor.putString(KEY_HEIGHT, height?.text.toString())
+        // editor.apply()
+        editor.commit()
     }
 
     fun BmiGagment(bmi: Double): String {

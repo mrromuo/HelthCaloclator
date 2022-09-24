@@ -9,7 +9,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import com.example.helthcaloclator.BMI.Companion.DATABMI
-import com.example.helthcaloclator.BMI.Companion.WEIGHT_KEY
+import com.example.helthcaloclator.BMI.Companion.KEY_WEIGHT
 
 
 class water : AppCompatActivity() {
@@ -19,10 +19,6 @@ class water : AppCompatActivity() {
     var waterNeeds2: TextView? = null
     lateinit var sharedPreferences: SharedPreferences
     lateinit var editor: SharedPreferences.Editor
-    companion object{
-        val WATERDATA ="whaterdata"
-        val WATER_WEIGHT_KEY ="WWKEY"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +28,7 @@ class water : AppCompatActivity() {
         waterNeeds2 = findViewById(R.id.WTRtv2)
         sharedPreferences = this.getSharedPreferences(DATABMI,Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()
-        val weightData:String? = sharedPreferences.getString(WEIGHT_KEY,null)
+        val weightData:String? = sharedPreferences.getString(KEY_WEIGHT,null)
         if(!weightData.isNullOrBlank()) {
             bodyWeight?.setText(weightData)
         }
@@ -56,7 +52,7 @@ class water : AppCompatActivity() {
             val myTexts2 = "$fr $Lcup $to $Hcup $cups"
             waterNeeds?.text = myTexts
             waterNeeds2?.text = myTexts2
-            editor.putString(WEIGHT_KEY,bodyWeight?.text.toString())
+            editor.putString(KEY_WEIGHT,bodyWeight?.text.toString())
             editor.apply()
             editor.commit()
         } else waterNeeds?.text = getText(R.string.W_weightError)

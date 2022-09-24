@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/hrtbtlayout"
     style="@style/Layoutscomens"
-    android:gravity="center_vertical"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".heatbt">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
     <TextView
         android:id="@+id/textView4"
         style="@style/TextoftitalsText"
@@ -86,3 +90,4 @@
         android:gravity="center_horizontal"
         android:padding="5dp" />
 </LinearLayout>
+</ScrollView>

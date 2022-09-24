@@ -7,11 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.TextView
-import androidx.core.view.get
-import java.lang.NullPointerException
 
 class heatbt : AppCompatActivity() {
 
@@ -23,8 +19,8 @@ class heatbt : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
     companion object{
-        val  AGE_KEY = "userage"
-        val HARTBEATS_KEY ="harts"
+        const val  KEY_AGE = "userage"
+        const val KEY_HEARTBEATS ="harts"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,8 +34,8 @@ class heatbt : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences(BMI.DATABMI, Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()
-        val getHart: String? = sharedPreferences.getString(HARTBEATS_KEY, null)
-        val getAge:String? =sharedPreferences.getString(AGE_KEY,null)
+        val getHart: String? = sharedPreferences.getString(KEY_HEARTBEATS, null)
+        val getAge:String? =sharedPreferences.getString(KEY_AGE,null)
         if (!getHart.isNullOrBlank()) RHR?.setText(getHart)
         if (!getAge.isNullOrBlank()) Age?.setText(getAge)
         Log.d("loade----------------------->","done as ${getAge} years ols and ${getHart} Heart beats")
@@ -61,8 +57,8 @@ class heatbt : AppCompatActivity() {
                         val HRmin:Int = ((HRR*.5) + hresting).toInt()
                         val HRMod:Int = ((HRR*.7) + hresting).toInt()
                         val HRintense:Int = ((HRR*.85) + hresting).toInt()
-                        editor.putString(AGE_KEY,Age?.text.toString())
-                        editor.putString(HARTBEATS_KEY,RHR?.text.toString())
+                        editor.putString(KEY_AGE,Age?.text.toString())
+                        editor.putString(KEY_HEARTBEATS,RHR?.text.toString())
                         editor.apply()
                         editor.commit()
                         Log.d("sheard----------------------->","done as ${Age?.text.toString()} years ols and ${RHR?.text.toString()} Heart beats")

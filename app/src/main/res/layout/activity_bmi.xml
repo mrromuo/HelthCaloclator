@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Layoutscomens"
-    android:layout_gravity="center_vertical"
     android:orientation="vertical"
-android:gravity="center_horizontal"
     tools:context=".BMI">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
     <TextView
         android:id="@+id/textView10"
         style="@style/TextoftitalsText"
         android:text="@string/bmi" />
-
-    <Space
-        android:id="@+id/spc01"
-        android:layout_width="match_parent"
-        android:layout_height="@android:dimen/app_icon_size" />
 
     <TableRow
         android:layout_width="match_parent"
@@ -61,7 +59,7 @@ android:gravity="center_horizontal"
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="top">
+        android:gravity="center_horizontal">
 
         <Button
             android:id="@+id/BMIcalculate"
@@ -70,18 +68,15 @@ android:gravity="center_horizontal"
             android:onClick="bmiCalculate"
             android:text="@string/Calculate" />
 
-        <TextView
-            android:id="@+id/BMItv"
-            style="@style/TextforRsults"
-            android:layout_height="match_parent"
-            android:gravity="center" />
-
     </TableRow>
+    <TextView
+        android:id="@+id/BMItv"
+        style="@style/TextforRsults"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/BMIclass"
         style="@style/TextforRsults"
-        android:layout_height="wrap_content"
         android:gravity="center" />
 
     <TableRow
@@ -120,3 +115,4 @@ android:gravity="center_horizontal"
         android:minHeight="50dp"
         android:progress="0" />
 </LinearLayout>
+</ScrollView>

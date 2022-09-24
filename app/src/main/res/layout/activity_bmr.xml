@@ -10,6 +10,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical" >
 
             <TextView
@@ -186,7 +187,6 @@
             <TextView
                 android:id="@+id/BMRtv"
                 style="@style/TextforRsults"
-                android:layout_height="100dp"
                 android:layout_margin="5dp"
                 android:textAlignment="center" />
         </LinearLayout>

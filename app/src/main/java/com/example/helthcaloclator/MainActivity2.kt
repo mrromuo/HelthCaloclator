@@ -27,4 +27,9 @@ class MainActivity2 : AppCompatActivity() {
         startActivity(intent)
 
     }
+
+    fun foodx(view: View) {
+        val intent = Intent(this, Food::class.java)
+        startActivity(intent)
+    }
 }

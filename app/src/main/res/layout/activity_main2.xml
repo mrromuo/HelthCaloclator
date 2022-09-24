@@ -55,6 +55,12 @@
                 android:onClick="bmrx"
                 android:text="@string/CalorieCalculator" />
 
+            <Button
+                android:id="@+id/sel5"
+                style="@style/comunButtons"
+                android:onClick="foodx"
+                android:text="@string/foodcalculator" />
+
             <Space
                 android:layout_width="16dp"
                 android:layout_height="32dp" />

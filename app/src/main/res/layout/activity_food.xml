@@ -1,9 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Food">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/titelFood"
+            style="@style/TextoftitalsText"
+            android:text="@string/foodcalculator"
+            android:textAlignment="center" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/FoodCaloriesTv"
+                style="@style/TextofTextView"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/daycalories" />
+
+            <EditText
+                android:id="@+id/FoodCaloriesEdit"
+                style="@style/EditTextStyle"
+                android:ems="10"
+                android:hint="@string/calorieshint"
+                android:importantForAutofill="no"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/FoodAgeTex"
+                style="@style/TextofTextView"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/age" />
+
+            <EditText
+                android:id="@+id/FoodAgeEdit"
+                style="@style/EditTextStyle"
+                android:ems="10"
+                android:hint="@string/age_hint"
+                android:importantForAutofill="no"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/Foodcalculate"
+            style="@style/comunButtons"
+            android:layout_width="200dp"
+            android:text="@string/Calculate" />
+
+        <TextView
+            android:id="@+id/FoodcarpHead"
+            style="@style/TextforRsults"
+            android:layout_margin="5dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/FoodcarpTv"
+            style="@style/TextforRsults"
+            android:layout_margin="5dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/FoodProHead"
+            style="@style/TextforRsults"
+            android:layout_margin="5dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/FoodProTv"
+            style="@style/TextforRsults"
+            android:layout_margin="5dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/FoodFatHead"
+            style="@style/TextforRsults"
+            android:layout_margin="5dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/FoodFatTv"
+            style="@style/TextforRsults"
+            android:layout_margin="5dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+</ScrollView>

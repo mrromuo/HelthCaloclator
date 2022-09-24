@@ -16,9 +16,8 @@
     <!-- Heart Rate Calculator -->
     <string name="HeartTar">حساب معدل نبضات القلب المستهدف</string>
     <string name="age">عمرك</string>
-    <string name="age_hint">العمر بين ال15 و ال80 سنة</string>
+    <string name="age_hint">العمر بين ال15 و ال90 سنة</string>
     <string name="H_Resting_Heart">نبضات القلب في الراحة</string>
-    <string name="H_Age_Error">آسف العمر يجب ان يكون بين 15 سنة و ال80 سنة</string>
     <string name="H_RHR_Error">نبضات القلب وقت الراحة تكون بين 50 و ال90 نبضة في الدقيقة</string>
     <string name="H_Target_min">اقل نبضات</string>
     <string name="H_Target_mod">النبضات المعتدلة</string>
@@ -26,7 +25,7 @@
     <string name="H_Target_tr">أثناء التمرين</string>
 
     <!-- water needs Calculator -->
-    <string name="W_weightError">أرجو مراجعة الوزن!</string>
+
     <string name="to"> الى </string>
     <string name="from">أنت بحاجة من </string>
     <string name="ml"> لترا </string>
@@ -44,9 +43,7 @@
     <string name="active">ممارسة يومية نشطة</string>
     <string name="varyActive">تمرين مكثف 6 أو 7 أيام أسبوعيا</string>
     <string name="HarrisBenedict">هاريس بنديكت</string>
-    <string name="BMRerror">يرجى التحقق من المدخلات الخاصة بك</string>
-    <string name="height_Erorr">تحقق من الطول ثم حاول مجددا</string>
-    <string name="weight_Erorr">تحقق من الوزن ثم حاول مجددا</string>
+
 
     <!--weight table -->
     <string name="weight1">نقص في الوزن</string>
@@ -57,7 +54,25 @@
     <string name="weight6">سمنة مفرطة</string>
     <string name="BMIweightHent">وزنك</string>
     <string name="resthartbt">معدل نبضات القلب اثناء الراحة</string>
-    <string name="BMRrsultTitleerorr">حدث خطأ!</string>
     <string name="BMRrsultTitle">النتيجة</string>
+    <string name="foodcalculator">حاسبة الاحتياجات الغذائية</string>
+    <string name="daycalories">سعرات حراريه</string>
+    <string name="calorieshint">حاجتك من السعرات الحرارية في اليوم</string>
 
+    <!-- Error messages list -->
+    <string name="H_Age_Error">آسف العمر يجب ان يكون بين 15 سنة و ال90 سنة</string>
+    <string name="W_weightError">أرجو مراجعة الوزن!</string>
+    <string name="BMRerror">يرجى التحقق من المدخلات الخاصة بك</string>
+    <string name="height_Erorr">تحقق من الطول ثم حاول مجددا</string>
+    <string name="weight_Erorr">تحقق من الوزن ثم حاول مجددا</string>
+    <string name="foodcalorisx">من فضلك ، تحقق من السعرات الحرارية مرة أخرى</string>
+    <string name="BMRrsultTitleerorr">حدث خطأ!</string>
+    <string name="food_carb_needs">"احتياجاتك من الكربوهيدرات تقريبا "</string>
+    <string name="food_prot_needs">"احتياجاتك من البروتين تقريبًا "</string>
+    <string name="food_fat_needs">"احتياجاتك من الدهون تقريبًا "</string>
+
+    <!--   ======         UNTS          ========        -->
+    <string name="unt_grams"> جرام</string>
+    <string name="unt_cm"> سم</string>
+    <string name="unt_kg"> كج</string>
 </resources>
