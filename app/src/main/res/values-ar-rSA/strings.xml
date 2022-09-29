@@ -75,4 +75,6 @@
     <string name="unt_grams"> جرام</string>
     <string name="unt_cm"> سم</string>
     <string name="unt_kg"> كج</string>
+    <string name="Presshere">اضغط هنا</string>
+    <string name="help">Help</string>
 </resources>

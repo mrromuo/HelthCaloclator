@@ -3,116 +3,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Layoutscomens"
-    android:orientation="vertical"
     tools:context=".BMI">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    >
-    <TextView
-        android:id="@+id/textView10"
-        style="@style/TextoftitalsText"
-        android:text="@string/bmi" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/bmitoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/bmi"
+                app:titleTextAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            style="@style/TextofTextView"
-            android:text="@string/height" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
 
-        <EditText
-            android:id="@+id/BMIheight"
-            style="@style/EditTextStyle"
-            android:ems="10"
-            android:hint="@string/height_hint"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAutofill="no" />
-    </TableRow>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    style="@style/TextofTextView"
+                    android:text="@string/height" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+                <EditText
+                    android:id="@+id/BMIheight"
+                    style="@style/EditTextStyle"
+                    android:ems="10"
+                    android:hint="@string/height_hint"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:importantForAutofill="no" />
+            </TableRow>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            style="@style/TextofTextView"
-            android:text="@string/BMIweightHent"
-            tools:text="@string/Weight" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
 
-        <EditText
-            android:id="@+id/BMIweight"
-            style="@style/EditTextStyle"
-            android:ems="10"
-            android:hint="@string/weight_hint"
-            android:importantForAutofill="no"/>
-    </TableRow>
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    style="@style/TextofTextView"
+                    android:text="@string/BMIweightHent"
+                    tools:text="@string/Weight" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/BMIweight"
+                    style="@style/EditTextStyle"
+                    android:ems="10"
+                    android:hint="@string/weight_hint"
+                    android:importantForAutofill="no"/>
+            </TableRow>
 
-        <Button
-            android:id="@+id/BMIcalculate"
-            style="@style/comunButtons"
-            android:layout_width="200dp"
-            android:onClick="bmiCalculate"
-            android:text="@string/Calculate" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
 
-    </TableRow>
-    <TextView
-        android:id="@+id/BMItv"
-        style="@style/TextforRsults"
-        android:gravity="center" />
+                <Button
+                    android:id="@+id/BMIcalculate"
+                    style="@style/comunButtons"
+                    android:layout_width="200dp"
+                    android:onClick="bmiCalculate"
+                    android:text="@string/Calculate" />
 
-    <TextView
-        android:id="@+id/BMIclass"
-        style="@style/TextforRsults"
-        android:gravity="center" />
+            </TableRow>
 
-    <TableRow
-        android:id="@+id/imagsrow"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center">
+            <TextView
+                android:id="@+id/BMItv"
+                style="@style/TextforRsults"
+                android:gravity="center" />
 
-        <ImageView
-            android:id="@+id/femailImage"
-            android:layout_width="150dp"
-            android:layout_height="300dp"
-            app:srcCompat="@drawable/normal"
-            android:contentDescription="@string/female" />
+            <TextView
+                android:id="@+id/BMIclass"
+                style="@style/TextforRsults"
+                android:gravity="center" />
 
-        <ImageView
-            android:id="@+id/maleimage"
-            android:layout_width="150dp"
-            android:layout_height="300dp"
-            android:contentDescription="@string/male"
-            app:srcCompat="@drawable/normal_m"
-            tools:ignore="ImageContrastCheck" />
-    </TableRow>
-    <ProgressBar
-        android:id="@+id/determinate_progress_Bar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:indeterminate="false"
-        android:max="100"
-        android:minWidth="100dp"
-        android:minHeight="50dp"
-        android:progress="0" />
-</LinearLayout>
+            <TableRow
+                android:id="@+id/imagsrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/femailImage"
+                    android:layout_width="150dp"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/female"
+                    app:srcCompat="@drawable/normal"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/maleimage"
+                    android:layout_width="150dp"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/male"
+                    app:srcCompat="@drawable/normal_m"
+                    tools:ignore="ImageContrastCheck" />
+            </TableRow>
+
+            <ProgressBar
+                android:id="@+id/determinate_progress_Bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:minWidth="100dp"
+                android:minHeight="50dp"
+                android:progress="0" />
+        </LinearLayout>
+
 </ScrollView>

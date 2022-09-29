@@ -1,16 +1,21 @@
 package com.example.helthcaloclator
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.app.ActionBarDrawerToggle
+import com.example.helthcaloclator.databinding.ActivityMainBinding
 
 class BMI : AppCompatActivity() {
 
@@ -23,7 +28,6 @@ class BMI : AppCompatActivity() {
     private var classification: TextView? = null
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
-
     companion object {
         const val DATABMI = "mydata"
         const val KEY_WEIGHT = "BMIWeight"
@@ -34,6 +38,8 @@ class BMI : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmi)
+        setSupportActionBar(findViewById(R.id.bmitoolbar))
+
         height = findViewById(R.id.BMIheight)
         weight = findViewById(R.id.BMIweight)
         mImage = findViewById(R.id.maleimage)
@@ -146,5 +152,61 @@ class BMI : AppCompatActivity() {
             else -> R.drawable.extremly_obese
         }
         return imagnum
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.bmi_menu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+
+            R.id.menu_bmr -> {
+                bmrx()
+                true
+            }
+            R.id.menu_food ->{
+                foodx()
+                true
+            }
+            R.id.menu_water ->{
+                wtr()
+                true
+            }
+            R.id.menu_heart ->
+            {
+                hbt()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+    fun foodx(view: View) {
+        val intent = Intent(this, Food::class.java)
+        startActivity(intent)
+        this.finish()
+    }
+
+    fun wtr() {
+        val intent = Intent(this, water::class.java)
+        startActivity(intent)
+        this.finish()
+    }
+    fun hbt() {
+        val intent = Intent(this, heatbt::class.java)
+        startActivity(intent)
+    }
+    fun bmrx() {
+        val intent = Intent(this, BMR::class.java)
+        startActivity(intent)
+        this.finish()
+    }
+
+    fun foodx() {
+        val intent = Intent(this, Food::class.java)
+        startActivity(intent)
+        this.finish()
     }
 }

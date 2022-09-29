@@ -75,4 +75,6 @@
     <string name="unt_grams"> gr</string>
     <string name="unt_cm"> cm</string>
     <string name="unt_kg"> Kg</string>
+    <string name="Presshere">Press here</string>
+    <string name="help">Help</string>
 </resources>

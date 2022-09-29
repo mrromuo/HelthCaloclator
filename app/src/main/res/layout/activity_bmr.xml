@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Calories"
     style="@style/Layoutscomens"
-    android:orientation="vertical"
     tools:context=".BMR">
 
-
         <LinearLayout
+            style="@style/Layoutscomens"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textView3"
-                style="@style/TextoftitalsText"
-                android:text="@string/CalorieCalculator"
-                android:textAlignment="center" />
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/bmrtoolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                 app:title="@string/CalorieCalculator"
+                 app:titleTextAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TableRow
                 android:layout_width="match_parent"
@@ -173,7 +173,6 @@
                         android:layout_height="wrap_content"
                         android:onClick="checkActivity"
                         android:text="@string/varyActive" />
-
                 </RadioGroup>
             </TableRow>
 
@@ -190,6 +189,4 @@
                 android:layout_margin="5dp"
                 android:textAlignment="center" />
         </LinearLayout>
-
-
 </ScrollView>

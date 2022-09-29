@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="textSize">14sp</dimen>
+    <dimen name="ComunButtonwidth">200dp</dimen>
+    <dimen name="ComunButtonTopMarge">10dp</dimen>
     <dimen name="RsultText">14sp</dimen>
     <dimen name="RsultTextHeght" >48dp</dimen>
     <dimen name="layoutmargins">5dp</dimen>
+    <dimen name="nvheight">150dp</dimen>
+    <dimen name="nvw">150dp</dimen>
 </resources>
