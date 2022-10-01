@@ -20,24 +20,6 @@
     </style>
 
 
-    <style name="TextoftitalsText">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">?android:attr/windowTitleSize</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/textSize</item>
-        <item name="android:fontFamily">sans-serif-black</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="comunTextsViews">
-        <item name="android:layout_width">336dp</item>
-        <item name="android:layout_height">56dp</item>
-        <item name="android:layout_marginTop">35dp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/textSize</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="comunButtons">
         <item name="android:layout_width">@dimen/ComunButtonwidth</item>
         <item name="android:layout_height">56dp</item>
@@ -67,14 +49,6 @@
         <item name="android:src">@drawable/yallowlogo</item>
     </style>
 
-    <style name="TostTextView">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_gravity">center</item>
-    </style>
-
     <style name="EditTextStyle">
         <item name="android:textSize">16sp</item>
         <item name="android:layout_width">match_parent</item>
@@ -83,11 +57,6 @@
         <item name="android:textColorHint">#CBBBCC</item>
         <item name="android:textStyle">bold</item>
         <item name="android:inputType">numberDecimal</item>
-    </style>
-    <style name="ViewMenuButtons">
-        <item name="android:layout_width">48dp</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:background">@drawable/ic_dots_button_02_32</item>
     </style>
 
 </resources>

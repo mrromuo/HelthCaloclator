@@ -6,14 +6,14 @@
     <string name="selection_3">Heart Rate Calculator</string>
     <string name="Calculate">Calculate</string>
 
-    <!--   BMI -->
+    <!--         =======================       BMI         =======================     -->
     <string name="bmi">body mass index</string>
     <string name="height">your height</string>
     <string name="height_hint">your height in CMs</string>
     <string name="Weight">your weight</string>
     <string name="weight_hint">your weight in KGs</string>
 
-    <!-- Heart Rate Calculator -->
+    <!--         =======================     Heart Rate Calculator        =======================      -->
     <string name="age_hint">ages 15 to 90</string>
     <string name="H_RHR_Error">Heart beats during reset must be between 50 to 90</string>
     <string name="HeartTar">Target Heart Rate Calculator</string>
@@ -22,16 +22,15 @@
     <string name="H_Target_min">Minimum heart beats</string>
     <string name="H_Target_mod">Moderate Heart beats</string>
     <string name="H_Target_max">Maximum heart beats</string>
-    <string name="H_Target_tr">during this training</string>
 
-    <!-- water needs Calculator -->
+    <!--         =======================     water needs Calculator        =======================      -->
     <string name="W_weightError">Please check your weight!</string>
     <string name="to"> to </string>
     <string name="from">you need from </string>
     <string name="ml"> Lt </string>
     <string name="cups"> CUPs </string>
 
-    <!-- Calorie Calculator -->
+    <!--         =======================     Calorie Calculator         =======================     -->
     <string name="CalorieCalculator">Calorie Calculator</string>
     <string name="Gender">Gender</string>
     <string name="male">Male</string>
@@ -42,10 +41,9 @@
     <string name="moderate">Moderate 4 to 5 times weekly</string>
     <string name="active">Active daily exercise</string>
     <string name="varyActive">intense exercise 6 or 7 days weekly</string>
-    <string name="HarrisBenedict">Harris Benedict</string>
 
 
-    <!--weight table -->
+    <!--        =======================     weight table        =======================     -->
     <string name="weight1">underweight</string>
     <string name="weight2">healthy weight</string>
     <string name="weight3">overweight</string>
@@ -53,11 +51,10 @@
     <string name="weight5">Severely obese</string>
     <string name="weight6">Very severely obese</string>
     <string name="BMIweightHent">Your weight</string>
-    <string name="resthartbt">your heart beats guring reat</string>
     <string name="foodcalculator">Food Needs Calculator</string>
     <string name="daycalories">Calories</string>
 
-    <!-- Error messages list -->
+    <!--    =======================     Error messages list         =======================     -->
 
     <string name="H_Age_Error">sorry! age must be between 15 to 90 only</string>
     <string name="BMRerror">Please check your inputs</string>
@@ -71,10 +68,19 @@
     <string name="food_prot_needs">"Your needs for protein approximately"</string>
     <string name="food_fat_needs">"Your needs for Fats approximately"</string>
 
-    <!--   ======         UNTS          ========        -->
+    <!--   =======================         UNTS          =======================        -->
     <string name="unt_grams"> gr</string>
-    <string name="unt_cm"> cm</string>
-    <string name="unt_kg"> Kg</string>
-    <string name="Presshere">Press here</string>
     <string name="help">Help</string>
+    <string name="helptitle">App Help</string>
+
+    <!--         =======================          H E L P     L I S T       =====================       -->
+    <string-array name="helplist">
+        <item>what is BMI?</item>
+        <item>Calorie calculation</item>
+        <item>Target Heart Rate</item>
+        <item>Water</item>
+        <item>Healthy Nutrition</item>
+        <item>Privicy Polcy</item>
+        <item>Contact Me</item>
+    </string-array>
 </resources>

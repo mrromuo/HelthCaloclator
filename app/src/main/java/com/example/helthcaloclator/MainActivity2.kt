@@ -25,6 +25,10 @@ class MainActivity2 : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle item selection
         return when (item.itemId) {
+            R.id.menu_help->{
+                help()
+                true
+            }
             R.id.menu_BMI -> {
                 bmi()
                 true
@@ -50,6 +54,10 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
+    private fun help() {
+        val intent = Intent(this, HELP::class.java)
+        startActivity(intent)
+    }
 
 
     fun bmi(view: View) {

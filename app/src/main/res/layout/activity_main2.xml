@@ -6,10 +6,10 @@
     tools:context=".MainActivity2">
 
             <LinearLayout
-            style="@style/Layoutscomens"
                 android:layout_width="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" >
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/maintoolbar"

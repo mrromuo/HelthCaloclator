@@ -6,6 +6,4 @@
     <dimen name="RsultText">14sp</dimen>
     <dimen name="RsultTextHeght" >48dp</dimen>
     <dimen name="layoutmargins">5dp</dimen>
-    <dimen name="nvheight">150dp</dimen>
-    <dimen name="nvw">150dp</dimen>
 </resources>

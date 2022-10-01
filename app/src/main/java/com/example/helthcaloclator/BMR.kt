@@ -201,6 +201,9 @@ class BMR : AppCompatActivity() {
             {
                 Intent(this, heatbt::class.java)
             }
+            R.id.menu_help ->{
+                Intent(this, HELP::class.java)
+            }
             else -> Intent(this, MainActivity2::class.java)
         }
         startActivity(intent)
@@ -208,3 +211,4 @@ class BMR : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
         }
     }
+//todo: وضع قيمة افتراضية للجنس و معدل النشاط لمنع النتيجة صفر

@@ -22,7 +22,6 @@
     <string name="H_Target_min">اقل نبضات</string>
     <string name="H_Target_mod">النبضات المعتدلة</string>
     <string name="H_Target_max">أعلى نبضات</string>
-    <string name="H_Target_tr">أثناء التمرين</string>
 
     <!-- water needs Calculator -->
 
@@ -42,7 +41,6 @@
     <string name="moderate">معتدل 4 إلى 5 مرات أسبوعيا</string>
     <string name="active">ممارسة يومية نشطة</string>
     <string name="varyActive">تمرين مكثف 6 أو 7 أيام أسبوعيا</string>
-    <string name="HarrisBenedict">هاريس بنديكت</string>
 
 
     <!--weight table -->
@@ -53,7 +51,6 @@
     <string name="weight5">سمنة عالية</string>
     <string name="weight6">سمنة مفرطة</string>
     <string name="BMIweightHent">وزنك</string>
-    <string name="resthartbt">معدل نبضات القلب اثناء الراحة</string>
     <string name="BMRrsultTitle">النتيجة</string>
     <string name="foodcalculator">حاسبة الاحتياجات الغذائية</string>
     <string name="daycalories">سعرات حراريه</string>
@@ -73,8 +70,17 @@
 
     <!--   ======         UNTS          ========        -->
     <string name="unt_grams"> جرام</string>
-    <string name="unt_cm"> سم</string>
-    <string name="unt_kg"> كج</string>
-    <string name="Presshere">اضغط هنا</string>
     <string name="help">Help</string>
+    <string name="helptitle">App Help</string>
+
+    <!--         =======================          H E L P     L I S T       =====================       -->
+    <string-array name="helplist">
+        <item>كتلة الجسم</item>
+        <item>السعرات الحرارية</item>
+        <item>نبض القلب المستهدف</item>
+        <item>الماء</item>
+        <item>التغدية الصحية</item>
+        <item>سياسة الخصوصية</item>
+        <item>اتصل بنا</item>
+    </string-array>
 </resources>

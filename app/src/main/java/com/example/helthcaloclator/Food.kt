@@ -174,6 +174,9 @@ class Food : AppCompatActivity() {
                   {
                         Intent(this, heatbt::class.java)
                   }
+                  R.id.menu_help ->{
+                        Intent(this, HELP::class.java)
+                  }
                   else -> Intent(this, MainActivity2::class.java)
             }
             startActivity(intent)

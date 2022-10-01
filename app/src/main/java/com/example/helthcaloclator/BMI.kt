@@ -180,6 +180,10 @@ class BMI : AppCompatActivity() {
                 hbt()
                 true
             }
+            R.id.menu_help ->{
+                help()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -187,6 +191,10 @@ class BMI : AppCompatActivity() {
         val intent = Intent(this, Food::class.java)
         startActivity(intent)
         this.finish()
+    }
+    private fun help() {
+        val intent = Intent(this, HELP::class.java)
+        startActivity(intent)
     }
 
     fun wtr() {

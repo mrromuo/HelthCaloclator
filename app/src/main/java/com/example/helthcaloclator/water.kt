@@ -84,6 +84,9 @@ class water : AppCompatActivity() {
             {
                 Intent(this, Food::class.java)
             }
+            R.id.menu_help ->{
+                Intent(this, HELP::class.java)
+            }
             else -> Intent(this, MainActivity2::class.java)
         }
         startActivity(intent)
