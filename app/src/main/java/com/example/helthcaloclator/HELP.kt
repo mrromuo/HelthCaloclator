@@ -2,7 +2,6 @@ package com.example.helthcaloclator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.webkit.WebView
 import android.widget.AdapterView
@@ -38,9 +37,9 @@ class HELP : AppCompatActivity(), AdapterView.OnItemSelectedListener {
       }
 
       override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-           Log.d("p2 ================= p2 is",p2.toString())
+          // Log.d("p2 ================= p2 is",p2.toString())
             val website :String= if (p2 <= webList.size) webList[p2] else webList[0]
-            Log.d("website            ========            is",website)
+            //Log.d("website            ========            is",website)
             webView.settings.allowFileAccess = true
             webView.loadUrl(website)
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="textSize">32sp</dimen>
-    <dimen name="ComunButtonwidth">400dp</dimen>
+    <dimen name="textSize">30sp</dimen>
+    <dimen name="ComunButtonwidth">450dp</dimen>
     <dimen name="ComunButtonTopMarge">30dp</dimen>
     <dimen name="RsultText">28sp</dimen>
     <dimen name="RsultTextHeght" >58dp</dimen>

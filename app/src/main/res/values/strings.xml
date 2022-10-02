@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Helth Caloclator</string>
+    <string name="app_name">Health calculations</string>
     <string name="select">Select one</string>
     <string name="selection_1">BMI Calculator</string>
     <string name="selection_2">water needs Calculator</string>
@@ -70,6 +70,8 @@
 
     <!--   =======================         UNTS          =======================        -->
     <string name="unt_grams"> gr</string>
+
+    <!--   =======================         HELP          =======================        -->
     <string name="help">Help</string>
     <string name="helptitle">App Help</string>
 

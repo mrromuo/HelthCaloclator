@@ -70,10 +70,11 @@
 
     <!--   ======         UNTS          ========        -->
     <string name="unt_grams"> جرام</string>
-    <string name="help">Help</string>
-    <string name="helptitle">App Help</string>
+
 
     <!--         =======================          H E L P     L I S T       =====================       -->
+    <string name="help">مساعدة</string>
+    <string name="helptitle">المساعدة</string>
     <string-array name="helplist">
         <item>كتلة الجسم</item>
         <item>السعرات الحرارية</item>
