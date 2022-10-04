@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toolbar
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -65,11 +64,11 @@ class MainActivity2 : AppCompatActivity() {
         startActivity(intent)
     }
     fun wtr(view: View) {
-        val intent = Intent(this, water::class.java)
+        val intent = Intent(this, Water::class.java)
         startActivity(intent)
     }
     fun hbt(view: View) {
-        val intent = Intent(this, heatbt::class.java)
+        val intent = Intent(this, HeartBeats::class.java)
         startActivity(intent)
     }
     fun bmrx(view: View) {
@@ -87,11 +86,11 @@ class MainActivity2 : AppCompatActivity() {
         startActivity(intent)
     }
     fun wtr() {
-        val intent = Intent(this, water::class.java)
+        val intent = Intent(this, Water::class.java)
         startActivity(intent)
     }
     fun hbt() {
-        val intent = Intent(this, heatbt::class.java)
+        val intent = Intent(this, HeartBeats::class.java)
         startActivity(intent)
     }
     fun bmrx() {

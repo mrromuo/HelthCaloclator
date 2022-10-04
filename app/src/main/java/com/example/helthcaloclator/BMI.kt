@@ -14,18 +14,16 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.appcompat.app.ActionBarDrawerToggle
-import com.example.helthcaloclator.databinding.ActivityMainBinding
 
 class BMI : AppCompatActivity() {
 
-    private var height: EditText? = null
-    private var weight: EditText? = null
-    private var mImage:ImageView? = null
-    private var fImage:ImageView? = null
-    private var bmiview: TextView? = null
-    private var progresbr: ProgressBar? = null
-    private var classification: TextView? = null
+    private lateinit var height: EditText
+    private lateinit var weight: EditText
+    private lateinit var mImage:ImageView
+    private lateinit var fImage:ImageView
+    private lateinit var bmiview: TextView
+    private lateinit var progresbr: ProgressBar
+    private lateinit var classification: TextView
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
     companion object {
@@ -53,19 +51,19 @@ class BMI : AppCompatActivity() {
             sharedPreferences.getString(KEY_HEIGHT, null)
         val getW: String? =
             sharedPreferences.getString(KEY_WEIGHT, null)
-        height?.setText(getH)
-        weight?.setText(getW)
+        height.setText(getH)
+        weight.setText(getW)
 
     }
 
     fun bmiCalculate(view: View) {
-        if (height?.text.isNullOrBlank()) {
-            bmiview?.text = getText(R.string.height_Erorr)
-        } else if (weight?.text.isNullOrBlank()) {
-            bmiview?.text = getText(R.string.weight_Erorr)
+        if (height.text.isNullOrBlank()) {
+            bmiview.text = getText(R.string.height_Erorr)
+        } else if (weight.text.isNullOrBlank()) {
+            bmiview.text = getText(R.string.weight_Erorr)
         } else {
-            var heightVal: Double = (height?.text.toString()).toDouble()
-            var weightVal: Double = (weight?.text.toString()).toDouble()
+            var heightVal: Double = (height.text.toString()).toDouble()
+            var weightVal: Double = (weight.text.toString()).toDouble()
 
             heightVal = when (heightVal) {
                 in 1.0..2.50 -> heightVal * heightVal
@@ -77,20 +75,20 @@ class BMI : AppCompatActivity() {
             } else weightVal
 
             if (heightVal != .5 && weightVal != 1.0) {
-                SaveData()
+                savedata()
                 val bmi = weightVal / heightVal
-                bmiview?.text = String.format("BMI = %.2f", bmi)
-                val BmiWord = BmiGagment(bmi)
-                classification?.text = BmiWord
-                val BmiMimage = getImage(bmi)
-                mImage?.setImageResource(BmiMimage)
-                val BmiFimage= getFImage(bmi)
-                fImage?.setImageResource(BmiFimage)
+                bmiview.text = String.format("BMI = %.2f", bmi)
+                val bmiWord = bmiGagment(bmi)
+                classification.text = bmiWord
+                val bmiMimage = getImage(bmi)
+                mImage.setImageResource(bmiMimage)
+                val bmiFimage= getFImage(bmi)
+                fImage.setImageResource(bmiFimage)
                 val progress = (bmi * 2).toInt()
-                progresbr?.progress = if (progress < 100) {
+                progresbr.progress = if (progress < 100) {
                     progress
                 } else 100
-                progresbr?.progressTintList = if (progress < 36 || progress > 80) {
+                progresbr.progressTintList = if (progress < 36 || progress > 80) {
                     ColorStateList.valueOf(Color.RED)
                 } else if (progress < 52) {
                     ColorStateList.valueOf(Color.GREEN)
@@ -100,22 +98,22 @@ class BMI : AppCompatActivity() {
                     ColorStateList.valueOf(Color.YELLOW)
                 }
             } else if (heightVal == .5) {
-                bmiview?.text = getText(R.string.height_Erorr)
+                bmiview.text = getText(R.string.height_Erorr)
             } else {
-                bmiview?.text = getText(R.string.weight_Erorr)
+                bmiview.text = getText(R.string.weight_Erorr)
             }
         }
     }
-    private fun SaveData(){
+    private fun savedata(){
         // updating data
-        editor.putString(KEY_WEIGHT, weight?.text.toString())
+        editor.putString(KEY_WEIGHT, weight.text.toString())
         editor.commit()
-        editor.putString(KEY_HEIGHT, height?.text.toString())
+        editor.putString(KEY_HEIGHT, height.text.toString())
         // editor.apply()
         editor.commit()
     }
 
-    fun BmiGagment(bmi: Double): String {
+    fun bmiGagment(bmi: Double): String {
         val r = when (bmi) {
             in 0.0..18.49 -> resources.getString(R.string.weight1)
             in 18.50..24.99 -> resources.getString(R.string.weight2)
@@ -197,22 +195,22 @@ class BMI : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun wtr() {
-        val intent = Intent(this, water::class.java)
+    private fun wtr() {
+        val intent = Intent(this, Water::class.java)
         startActivity(intent)
         this.finish()
     }
-    fun hbt() {
-        val intent = Intent(this, heatbt::class.java)
+    private fun hbt() {
+        val intent = Intent(this, HeartBeats::class.java)
         startActivity(intent)
     }
-    fun bmrx() {
+    private fun bmrx() {
         val intent = Intent(this, BMR::class.java)
         startActivity(intent)
         this.finish()
     }
 
-    fun foodx() {
+    private fun foodx() {
         val intent = Intent(this, Food::class.java)
         startActivity(intent)
         this.finish()

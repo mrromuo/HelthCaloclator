@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Layoutscomens"
     tools:context=".Food">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,26 +38,94 @@
                 android:importantForAutofill="no"
                 tools:ignore="TouchTargetSizeCheck" />
         </TableRow>
+
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp">
-
+            android:gravity="center_horizontal">
             <TextView
-                android:id="@+id/FoodAgeTex"
                 style="@style/TextofTextView"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="@string/age" />
+                android:layout_width="@dimen/SeekBarNameWidth"
+                android:text="@string/carb"/>
+            <SeekBar
+                android:id="@+id/carbohydrateSeekBar"
+                style="@style/seekbars"
+                android:labelFor="@id/carbohydratePercentage"
+                android:layerType="hardware"
+                android:layoutDirection="inherit"
+                android:progress="2" />
 
             <EditText
-                android:id="@+id/FoodAgeEdit"
-                style="@style/EditTextStyle"
+                android:id="@+id/carbohydratePercentage"
+                style="@style/seekbarEditText"
                 android:ems="10"
-                android:hint="@string/age_hint"
-                android:importantForAutofill="no"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:hint="@string/resettodefault"
+                android:text="50" />
         </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                style="@style/TextofTextView"
+                android:layout_width="@dimen/SeekBarNameWidth"
+                android:text="@string/Pro"/>
+            <SeekBar
+                android:id="@+id/ProteinSeekBar"
+                style="@style/seekbars"
+                android:progress="2" />
+
+            <EditText
+                android:id="@+id/proteinPercentage"
+                style="@style/seekbarEditText"
+                android:ems="10"
+                android:text="30" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                style="@style/TextofTextView"
+                android:layout_width="@dimen/SeekBarNameWidth"
+                android:text="@string/Fat"/>
+            <SeekBar
+                android:id="@+id/fatsSeekBar"
+                style="@style/seekbars"
+                android:progress="2" />
+
+            <EditText
+                android:id="@+id/fatPercentage"
+                style="@style/seekbarEditText"
+                android:ems="10"
+                android:text="20" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            >
+            <Space
+                style="@style/seekbarEditText" />
+            <Button
+                android:id="@+id/FoodResetting"
+                android:layout_width="@dimen/SeekbarsWidth"
+                android:layout_height="wrap_content"
+                android:text="@string/resettodefault"/>
+
+            <TextView
+                android:id="@+id/totalPercentage"
+                android:layout_width="@dimen/SeekBarNameWidth"
+                android:layout_height="match_parent"
+                android:text="100"
+                android:gravity="center"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
 
         <Button
             android:id="@+id/Foodcalculate"

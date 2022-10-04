@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- ================Layouts ===================-->
     <style name="Layoutscomens">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_margin">@dimen/layoutmargins</item>
     </style>
+
+    <!-- ================Text View ===================-->
+
     <style name="TextofTextView">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">14sp</item>
@@ -19,19 +23,8 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-
-    <style name="comunButtons">
-        <item name="android:layout_width">@dimen/ComunButtonwidth</item>
-        <item name="android:layout_height">56dp</item>
-        <item name="android:layout_marginTop">@dimen/ComunButtonTopMarge</item>
-        <item name="android:background">@drawable/custom_buttom</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">@dimen/textSize</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="sotialText">
-        <item name="android:layout_width">@dimen/ComunButtonwidth</item>
+        <item name="android:layout_width">@dimen/CommuneButtonsWidth</item>
         <item name="android:layout_height">56dp</item>
         <item name="android:layout_marginTop">30dp</item>
         <item name="android:textColor">@color/white</item>
@@ -39,6 +32,8 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <!-- ================Image View ===================-->
 
     <style name="LogoView">
         <item name="android:layout_width">130dp</item>
@@ -48,6 +43,20 @@
         <item name="android:layout_marginTop">30dp</item>
         <item name="android:src">@drawable/yallowlogo</item>
     </style>
+
+    <!-- ================Buttons ===================-->
+
+    <style name="comunButtons">
+        <item name="android:layout_width">@dimen/CommuneButtonsWidth</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginTop">@dimen/CommuneButtonsTopMarge</item>
+        <item name="android:background">@drawable/custom_buttom</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/CommuneButtonsTextSize</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ================Edit Text ===================-->
 
     <style name="EditTextStyle">
         <item name="android:textSize">16sp</item>
@@ -59,4 +68,28 @@
         <item name="android:inputType">numberDecimal</item>
     </style>
 
+    <style name="seekbarEditText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">@dimen/editforsbarwidth</item>
+        <item name="android:layout_height">@dimen/SeekbarsHeight</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">#CBBBCC</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+    <!-- ================SEEK BARS ===================-->
+    <style name="seekbars">
+        <item name="android:textSize">16sp</item>
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        <item name="android:layout_width">@dimen/SeekbarsWidth</item>
+        <item name="android:layout_height">@dimen/SeekbarsHeight</item>
+        <item name="android:max">95</item>
+        <item name="android:min">5</item>
+        <item name="android:paddingTop">@dimen/SeekbarsPaddingTop</item>
+        <item name="android:paddingBottom">@dimen/SeekbarsPaddingBottom</item>
+    </style>
+    <style name="textColor">
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>

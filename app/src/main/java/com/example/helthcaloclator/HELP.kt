@@ -9,9 +9,9 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 
 class HELP : AppCompatActivity(), AdapterView.OnItemSelectedListener {
-      lateinit var webView: WebView
-      lateinit var spinner: Spinner
-      lateinit var webList:ArrayList<String>
+      private lateinit var webView: WebView
+      private lateinit var spinner: Spinner
+      private lateinit var webList:ArrayList<String>
 
       override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)

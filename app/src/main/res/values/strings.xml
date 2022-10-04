@@ -74,6 +74,12 @@
     <!--   =======================         HELP          =======================        -->
     <string name="help">Help</string>
     <string name="helptitle">App Help</string>
+    <string name="Fat">Fat</string>
+    <string name="carbohydrate">carbohydrate</string>
+    <string name="Protein">Protein</string>
+    <string name="Pro">PRO.</string>
+    <string name="carb">CRB.</string>
+    <string name="resettodefault">reset default</string>
 
     <!--         =======================          H E L P     L I S T       =====================       -->
     <string-array name="helplist">

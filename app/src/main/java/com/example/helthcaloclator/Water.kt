@@ -15,11 +15,11 @@ import com.example.helthcaloclator.BMI.Companion.DATABMI
 import com.example.helthcaloclator.BMI.Companion.KEY_WEIGHT
 
 
-class water : AppCompatActivity() {
+class Water : AppCompatActivity() {
 
-    var bodyWeight: EditText? = null
-    var waterNeeds: TextView? = null
-    var waterNeeds2: TextView? = null
+    private var bodyWeight: EditText? = null
+    private var waterNeeds: TextView? = null
+    private  var waterNeeds2: TextView? = null
     lateinit var sharedPreferences: SharedPreferences
     lateinit var editor: SharedPreferences.Editor
 
@@ -78,7 +78,7 @@ class water : AppCompatActivity() {
                 Intent(this, BMR::class.java)
             }
             R.id.menu_heart ->{
-                Intent(this, heatbt::class.java)
+                Intent(this, HeartBeats::class.java)
             }
             R.id.menu_food ->
             {

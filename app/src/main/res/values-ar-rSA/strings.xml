@@ -75,6 +75,12 @@
     <!--         =======================          H E L P     L I S T       =====================       -->
     <string name="help">مساعدة</string>
     <string name="helptitle">المساعدة</string>
+    <string name="Fat">Fat</string>
+    <string name="carbohydrate">carbohydrate</string>
+    <string name="Protein">Protein</string>
+    <string name="Pro">PRO.</string>
+    <string name="carb">CRB.</string>
+    <string name="resettodefault">استعادة الافتراضي</string>
     <string-array name="helplist">
         <item>كتلة الجسم</item>
         <item>السعرات الحرارية</item>

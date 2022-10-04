@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="textSize">25sp</dimen>
-    <dimen name="ComunButtonwidth">360dp</dimen>
-    <dimen name="ComunButtonTopMarge">25dp</dimen>
-    <dimen name="RsultText">24sp</dimen>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="RsultText">22sp</dimen>
     <dimen name="RsultTextHeght" >58dp</dimen>
     <dimen name="layoutmargins">15dp</dimen>
+    <dimen name="editforsbarwidth">48dp</dimen>
+
+    <!-- ================Commune Buttons ===================-->
+    <dimen name="CommuneButtonsTextSize">16sp</dimen>
+    <dimen name="CommuneButtonsWidth">350dp</dimen>
+    <dimen name="CommuneButtonsTopMarge">22dp</dimen>
+
+    <!-- ================SEEK BARS ===================-->
+    <dimen name="SeekbarsWidth">250dp</dimen>
+    <dimen name="SeekbarsHeight">48dp</dimen>
+    <dimen name="SeekbarsPaddingTop">20dp</dimen>
+    <dimen name="SeekbarsPaddingBottom">20dp</dimen>
+    <dimen name="SeekBarNameWidth">45dp</dimen>
 </resources>

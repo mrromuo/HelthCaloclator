@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import android.widget.Toast
 import java.util.*
 
 
@@ -24,9 +23,10 @@ class MainActivity : AppCompatActivity() {
         loacallang = Locale.getDefault().displayLanguage
     }
 
-    fun bmion(view: View){
+    fun bmiOn(view: View){
         val intent= Intent(this,MainActivity2::class.java)
         startActivity(intent)
+        finish()
     }
 
 

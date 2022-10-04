@@ -5,7 +5,7 @@
     android:id="@+id/wlayout"
     style="@style/Layoutscomens"
     android:orientation="vertical"
-    tools:context=".water">
+    tools:context=".Water">
 
 <LinearLayout
     android:layout_width="match_parent"

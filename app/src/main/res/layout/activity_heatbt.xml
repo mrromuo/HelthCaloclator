@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/hrtbtlayout"
     style="@style/Layoutscomens"
-    tools:context=".heatbt">
+    tools:context=".HeartBeats">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -83,7 +83,7 @@ class BMR : AppCompatActivity() {
                 R.id.BMRmod -> if (checked) actyvity = 3
                 R.id.BMRactiv -> if (checked) actyvity = 4
                 R.id.BMRvaryActiv -> if (checked) actyvity = 5
-                else -> actyvity = 0
+                else -> actyvity = 1
             }
             editor.putInt(KEY_ACTIVITY,actyvity)
             editor.commit()
@@ -91,7 +91,7 @@ class BMR : AppCompatActivity() {
     }
 
     fun BMRcalcolation(view: View) {
-        var bmrx:Double = 0.0
+        val bmrx: Double
         val age = if (agetext?.text.toString().isNotEmpty() && agetext?.text.toString()
                 .isNotBlank()
         ) (agetext?.text.toString()).toInt() else 0
@@ -107,14 +107,15 @@ class BMR : AppCompatActivity() {
                     .isNotBlank()
             ) (weightText?.text.toString()).toDouble() else 0.0
         if (age != 0 && height != 0.0 && weight != 0.0) {
-            if (isSexMale == true) {
+            if (isSexMale) {
                 prebmr = (weight * 10) + (height * 6.5) + (age * 5) + 5
                 bmrx = when(actyvity) {
                     1 -> prebmr!! * 1.25
                     2 -> prebmr!! * 1.375
                     3 -> prebmr!! * 1.55
                     4 -> prebmr!! * 1.725
-                    else -> 0.0
+                    5-> prebmr!!*1.9
+                    else -> prebmr!! * 1.25
                 }
             } else {
                 prebmr = (weight * 10) + (height * 6.5) + (age * 5) - 161
@@ -123,7 +124,8 @@ class BMR : AppCompatActivity() {
                     2 -> prebmr!! * 1.375
                     3 -> prebmr!! * 1.55
                     4 -> prebmr!! * 1.725
-                    else -> 0.0
+                    5-> prebmr!!*1.9
+                    else -> prebmr!! * 1.25
                 }
             }
             BMRtvText?.text =String.format("%.2f" , bmrx)
@@ -140,7 +142,7 @@ class BMR : AppCompatActivity() {
     }
 
     private fun savedata(age:String, height:String, weight:String,Calories:String) {
-        editor.putString(heatbt.KEY_AGE,age)
+        editor.putString(HeartBeats.KEY_AGE,age)
         editor.putString(BMI.KEY_HEIGHT,height)
         editor.putString(BMI.KEY_WEIGHT,weight)
         editor.putString(KEY_CALORIES,Calories)
@@ -149,13 +151,12 @@ class BMR : AppCompatActivity() {
     }
 
     private fun getMyData(){
-        agetext?.setText(sharedPreferences.getString(heatbt.KEY_AGE,null))
+        agetext?.setText(sharedPreferences.getString(HeartBeats.KEY_AGE,null))
         heightText?.setText(sharedPreferences.getString(BMI.KEY_HEIGHT,null))
         weightText?.setText(sharedPreferences.getString(BMI.KEY_WEIGHT,null))
-        val gender = sharedPreferences.getBoolean(KEY_GENDER,true)
-        isSexMale = gender
-        actyvity = sharedPreferences.getInt(KEY_ACTIVITY,0)
-        if (gender){
+        isSexMale = sharedPreferences.getBoolean(KEY_GENDER,true)
+        actyvity = sharedPreferences.getInt(KEY_ACTIVITY,1)
+        if (isSexMale){
             sexRadioGroup?.check(R.id.malebutton)
         }else{
             sexRadioGroup?.check(R.id.femaleButton)
@@ -195,11 +196,11 @@ class BMR : AppCompatActivity() {
                 Intent(this, Food::class.java)
             }
             R.id.menu_water ->{
-                Intent(this, water::class.java)
+                Intent(this, Water::class.java)
             }
             R.id.menu_heart ->
             {
-                Intent(this, heatbt::class.java)
+                Intent(this, HeartBeats::class.java)
             }
             R.id.menu_help ->{
                 Intent(this, HELP::class.java)
@@ -210,5 +211,4 @@ class BMR : AppCompatActivity() {
         this.finish()
         return super.onOptionsItemSelected(item)
         }
-    }
-//todo: وضع قيمة افتراضية للجنس و معدل النشاط لمنع النتيجة صفر
+ }
