@@ -17,6 +17,7 @@ import android.widget.TextView
 import com.example.helthcaloclator.KEYs.DATABMI
 import com.example.helthcaloclator.KEYs.KEY_HEIGHT
 import com.example.helthcaloclator.KEYs.KEY_WEIGHT
+import com.example.helthcaloclator.KEYs.Sq
 
 class BMI : AppCompatActivity() {
 
@@ -63,8 +64,8 @@ class BMI : AppCompatActivity() {
             var weightVal: Double = (weight.text.toString()).toDouble()
 
             heightVal = when (heightVal) {
-                in 1.0..2.50 -> heightVal * heightVal
-                in 100.0..250.0 -> (heightVal * heightVal) / 10000
+                in 1.0..2.50 -> Sq(heightVal)
+                in 100.0..250.0 -> Sq(heightVal)  / 10000
                 else -> .5
             }
             weightVal = if (weightVal < 30 || weightVal > 350) {

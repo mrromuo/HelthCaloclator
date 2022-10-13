@@ -13,4 +13,5 @@ object KEYs
       const val KEY_FAT = "FAT-PERCENTAGE"
       const val KEY_AGE = "USER_AGE"
       const val KEY_HEARTBEATS ="HEART_BEATS"
+      fun Sq(num:Double):Double =num * num
 }
