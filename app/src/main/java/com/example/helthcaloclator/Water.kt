@@ -11,8 +11,8 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import com.example.helthcaloclator.BMI.Companion.DATABMI
-import com.example.helthcaloclator.BMI.Companion.KEY_WEIGHT
+import com.example.helthcaloclator.KEYs.DATABMI
+import com.example.helthcaloclator.KEYs.KEY_WEIGHT
 
 
 class Water : AppCompatActivity() {

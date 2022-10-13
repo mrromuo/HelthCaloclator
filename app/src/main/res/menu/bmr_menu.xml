@@ -19,8 +19,6 @@
             android:title="@string/foodcalculator" />
 
     </group>
-
-
     <item
         android:id="@+id/menu_help"
         android:title="@string/help" />

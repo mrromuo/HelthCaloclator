@@ -9,6 +9,11 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import com.example.helthcaloclator.KEYs.DATABMI
+import com.example.helthcaloclator.KEYs.KEY_CALORIES
+import com.example.helthcaloclator.KEYs.KEY_CARBOHYDRATE
+import com.example.helthcaloclator.KEYs.KEY_FAT
+import com.example.helthcaloclator.KEYs.KEY_PROTEIN
 
 class Food : AppCompatActivity() {
       private lateinit var caloriesEdit:EditText
@@ -36,12 +41,6 @@ class Food : AppCompatActivity() {
       private lateinit var sharedPreferences: SharedPreferences
       private lateinit var editor: SharedPreferences.Editor
 
-      companion object{
-            //carbohydrate
-            const val KEY_CARBOHYDRATE = "CARBOHYDRATE-PERCENTAGE"
-            const val KEY_PROTEIN = "PROTEIN-PERCENTAGE"
-            const val KEY_FAT = "FAT-PERCENTAGE"
-      }
 
       override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -78,7 +77,7 @@ class Food : AppCompatActivity() {
             seekBarCrbEditText = findViewById(R.id.carbohydratePercentage)
 
             // Shared Preferences initiating
-            sharedPreferences = getSharedPreferences(BMI.DATABMI, Context.MODE_PRIVATE)
+            sharedPreferences = getSharedPreferences(DATABMI, Context.MODE_PRIVATE)
             editor = sharedPreferences.edit()
 
             // starting by get sharedPreferences data back
@@ -198,7 +197,7 @@ class Food : AppCompatActivity() {
       }
 
       private fun getSharedPreferencesDataBack() {
-            caloriesEdit.setText(sharedPreferences.getString(BMR.KEY_CALORIES,null))
+            caloriesEdit.setText(sharedPreferences.getString(KEY_CALORIES,null))
             CrbPersentage = sharedPreferences.getInt(KEY_CARBOHYDRATE,50)
             seekBarCrbEditText.setText(CrbPersentage.toString())
             seekBarCrb.progress =CrbPersentage
@@ -240,7 +239,7 @@ class Food : AppCompatActivity() {
       }
 
       private fun saveData() {
-            editor.putString(BMR.KEY_CALORIES,caloriesEdit.text.toString())
+            editor.putString(KEY_CALORIES,caloriesEdit.text.toString())
             editor.putInt(KEY_CARBOHYDRATE,CrbPersentage)
             editor.putInt(KEY_PROTEIN,ProtenPersentage)
             editor.putInt(KEY_FAT,FatPersentage)

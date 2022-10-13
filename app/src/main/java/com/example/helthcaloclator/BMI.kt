@@ -14,6 +14,9 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import com.example.helthcaloclator.KEYs.DATABMI
+import com.example.helthcaloclator.KEYs.KEY_HEIGHT
+import com.example.helthcaloclator.KEYs.KEY_WEIGHT
 
 class BMI : AppCompatActivity() {
 
@@ -26,12 +29,6 @@ class BMI : AppCompatActivity() {
     private lateinit var classification: TextView
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
-    companion object {
-        const val DATABMI = "mydata"
-        const val KEY_WEIGHT = "BMIWeight"
-        const val KEY_HEIGHT = "BMIHeight"
-
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +72,7 @@ class BMI : AppCompatActivity() {
             } else weightVal
 
             if (heightVal != .5 && weightVal != 1.0) {
-                savedata()
+                saveData()
                 val bmi = weightVal / heightVal
                 bmiview.text = String.format("BMI = %.2f", bmi)
                 val bmiWord = bmiGagment(bmi)
@@ -104,7 +101,8 @@ class BMI : AppCompatActivity() {
             }
         }
     }
-    private fun savedata(){
+
+    private fun saveData(){
         // updating data
         editor.putString(KEY_WEIGHT, weight.text.toString())
         editor.commit()
@@ -113,7 +111,7 @@ class BMI : AppCompatActivity() {
         editor.commit()
     }
 
-    fun bmiGagment(bmi: Double): String {
+    private fun bmiGagment(bmi: Double): String {
         val r = when (bmi) {
             in 0.0..18.49 -> resources.getString(R.string.weight1)
             in 18.50..24.99 -> resources.getString(R.string.weight2)
@@ -185,6 +183,7 @@ class BMI : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
     fun foodx(view: View) {
         val intent = Intent(this, Food::class.java)
         startActivity(intent)

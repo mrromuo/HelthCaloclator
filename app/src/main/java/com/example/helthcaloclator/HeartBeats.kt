@@ -10,6 +10,9 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import com.example.helthcaloclator.KEYs.DATABMI
+import com.example.helthcaloclator.KEYs.KEY_AGE
+import com.example.helthcaloclator.KEYs.KEY_HEARTBEATS
 
 class HeartBeats : AppCompatActivity() {
 
@@ -20,10 +23,7 @@ class HeartBeats : AppCompatActivity() {
     private var heartbeats2:TextView? = null
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
-    companion object{
-        const val  KEY_AGE = "USER_AGE"
-        const val KEY_HEARTBEATS ="HEART_BEATS"
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +36,7 @@ class HeartBeats : AppCompatActivity() {
         heartbeats1 = findViewById(R.id.HeartTextView1)
         heartbeats2 = findViewById(R.id.HeartTextView2)
 
-        sharedPreferences = getSharedPreferences(BMI.DATABMI, Context.MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences(DATABMI, Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()
         val getHart: String? = sharedPreferences.getString(KEY_HEARTBEATS, null)
         val getAge:String? =sharedPreferences.getString(KEY_AGE,null)

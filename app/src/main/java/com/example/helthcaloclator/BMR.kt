@@ -15,7 +15,14 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import com.example.helthcaloclator.BMI.Companion.DATABMI
+import com.example.helthcaloclator.KEYs.DATABMI
+import com.example.helthcaloclator.KEYs.KEY_ACTIVITY
+import com.example.helthcaloclator.KEYs.KEY_AGE
+import com.example.helthcaloclator.KEYs.KEY_CALORIES
+import com.example.helthcaloclator.KEYs.KEY_GENDER
+import com.example.helthcaloclator.KEYs.KEY_HEIGHT
+import com.example.helthcaloclator.KEYs.KEY_WEIGHT
+
 
 class BMR : AppCompatActivity() {
     private var agetext: EditText? = null
@@ -30,12 +37,6 @@ class BMR : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
 
-    companion object
-    {
-        const val KEY_GENDER ="SexKey"
-        const val KEY_ACTIVITY ="ActivityKey"
-        const val KEY_CALORIES ="Calories"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -142,18 +143,18 @@ class BMR : AppCompatActivity() {
     }
 
     private fun savedata(age:String, height:String, weight:String,Calories:String) {
-        editor.putString(HeartBeats.KEY_AGE,age)
-        editor.putString(BMI.KEY_HEIGHT,height)
-        editor.putString(BMI.KEY_WEIGHT,weight)
+        editor.putString(KEY_AGE,age)
+        editor.putString(KEY_HEIGHT,height)
+        editor.putString(KEY_WEIGHT,weight)
         editor.putString(KEY_CALORIES,Calories)
         editor.apply()
         editor.commit()
     }
 
     private fun getMyData(){
-        agetext?.setText(sharedPreferences.getString(HeartBeats.KEY_AGE,null))
-        heightText?.setText(sharedPreferences.getString(BMI.KEY_HEIGHT,null))
-        weightText?.setText(sharedPreferences.getString(BMI.KEY_WEIGHT,null))
+        agetext?.setText(sharedPreferences.getString(KEY_AGE,null))
+        heightText?.setText(sharedPreferences.getString(KEY_HEIGHT,null))
+        weightText?.setText(sharedPreferences.getString(KEY_WEIGHT,null))
         isSexMale = sharedPreferences.getBoolean(KEY_GENDER,true)
         actyvity = sharedPreferences.getInt(KEY_ACTIVITY,1)
         if (isSexMale){
